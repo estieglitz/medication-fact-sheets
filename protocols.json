@@ -24,14 +24,4 @@
     "aliases": ["aml intensification", "high dose cytarabine", "hide cytarabine", "hidac"],
     "medications": ["cytarabine", "etoposide", "mitoxantrone", "asparaginase"]
   },
-  "jmml-low-risk": {
-    "name": "JMML lower-risk T2020-style backbone",
-    "aliases": ["jmml lr", "lower risk jmml", "jmml lower risk", "t2020 lower risk", "t2020 lr"],
-    "medications": ["azacitidine", "trametinib"]
-  },
-  "jmml-high-risk": {
-    "name": "JMML high-risk T2020-style backbone",
-    "aliases": ["jmml hr", "high risk jmml", "jmml high risk", "t2020 high risk", "t2020 hr"],
-    "medications": ["azacitidine", "trametinib", "fludarabine", "cytarabine"]
-  }
 }

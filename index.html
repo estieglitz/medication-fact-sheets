@@ -10,19 +10,13 @@
   <main class="container">
     <section class="hero">
       <h1>Medication Fact Sheet Packet Builder</h1>
-      <p>Create one printable PDF packet from APHON medication fact sheets by selecting a protocol, entering medications, and choosing English or Spanish.</p>
+      <p>Create one printable PDF packet from APHON medication fact sheets by entering medications, optionally adding a protocol preset, and choosing English or Spanish.</p>
     </section>
 
     <section class="card grid">
       <div>
-        <label for="protocolInput">Protocol preset</label>
-        <input id="protocolInput" list="protocolList" placeholder="e.g., ALL induction, AML induction, JMML LR" />
-        <datalist id="protocolList"></datalist>
-        <div class="actions compact-actions">
-          <button id="loadProtocol" type="button">Add protocol medications</button>
-          <button id="replaceWithProtocol" type="button">Replace with protocol</button>
-        </div>
-        <small>Protocols are editable in <code>protocols.json</code>.</small>
+        <label for="medInput">Medications</label>
+        <textarea id="medInput" rows="8" placeholder="Type one medication per line, or separate with commas. Example: cytarabine, daunorubicin, etoposide"></textarea>
       </div>
       <div>
         <label for="language">Patient language</label>
@@ -32,16 +26,22 @@
         </select>
         <label class="checkbox"><input type="checkbox" id="coverPage" checked /> Add cover page</label>
       </div>
-    </section>
-
-    <section class="card">
-      <label for="medInput">Medications</label>
-      <textarea id="medInput" rows="8" placeholder="Type one medication per line, or separate with commas. Example: cytarabine, daunorubicin, etoposide"></textarea>
-      <div class="actions">
+      <div class="actions full-width">
         <button id="preview" type="button">Preview matches</button>
         <button id="generate" type="button" class="primary">Generate PDF packet</button>
         <button id="clear" type="button">Clear</button>
       </div>
+    </section>
+
+    <section class="card protocol-card">
+      <label for="protocolInput">Protocol presets</label>
+      <input id="protocolInput" list="protocolList" placeholder="e.g., SR ALL induction, AML induction, JMML LR" />
+      <datalist id="protocolList"></datalist>
+      <div class="actions compact-actions">
+        <button id="loadProtocol" type="button">Add protocol medications</button>
+        <button id="replaceWithProtocol" type="button">Replace with protocol</button>
+      </div>
+      <small>Protocols are editable in <code>protocols.json</code>. Use this section after the medication box if you want to auto-fill a predefined bundle.</small>
     </section>
 
     <section class="card">

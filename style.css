@@ -29,3 +29,5 @@ small, code { color: var(--muted); }
 .pill { display:inline-block; margin-left:8px; padding:2px 8px; border-radius:999px; background:#eef2ff; color:#3730a3; font-size:.82rem; }
 .note { color:var(--muted); font-size:.92rem; padding:6px 2px; }
 @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } .actions button { width:100%; } }
+.full-width { grid-column: 1 / -1; }
+.protocol-card { margin-top: 16px; }
