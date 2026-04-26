@@ -1,0 +1,31 @@
+:root { --bg:#f6f7fb; --card:#fff; --text:#1f2937; --muted:#6b7280; --line:#e5e7eb; --primary:#2563eb; --bad:#b91c1c; --good:#047857; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:var(--bg); color:var(--text); }
+.container { max-width: 960px; margin: 0 auto; padding: 32px 18px 56px; }
+.hero { margin-bottom: 20px; }
+h1 { margin:0 0 8px; font-size: 2rem; }
+p { color: var(--muted); line-height: 1.45; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:20px; margin:16px 0; box-shadow: 0 8px 20px rgba(0,0,0,.04); }
+.grid { display:grid; grid-template-columns: 2fr 1fr; gap:20px; }
+label { display:block; font-weight:700; margin-bottom:8px; }
+input, select, textarea { width:100%; border:1px solid #d1d5db; border-radius:12px; padding:12px; font-size:1rem; background:#fff; }
+textarea { resize: vertical; }
+button { border:1px solid #d1d5db; background:#fff; border-radius:12px; padding:10px 14px; cursor:pointer; font-weight:700; }
+button:hover { background:#f9fafb; }
+button.primary { background:var(--primary); border-color:var(--primary); color:white; }
+button.primary:hover { filter: brightness(.96); }
+.actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
+.compact-actions { margin-top:10px; }
+.checkbox { margin-top:18px; display:flex; align-items:center; gap:8px; font-weight:600; }
+.checkbox input { width:auto; }
+small, code { color: var(--muted); }
+.summary { color:var(--muted); margin-bottom:10px; font-size:.95rem; }
+.results { display:grid; gap:8px; }
+.results.muted { color: var(--muted); }
+.match { padding:10px 12px; border:1px solid var(--line); border-radius:12px; background:#fbfdff; }
+.badrow { background:#fff7f7; }
+.good { color:var(--good); font-weight:800; }
+.bad { color:var(--bad); font-weight:800; }
+.pill { display:inline-block; margin-left:8px; padding:2px 8px; border-radius:999px; background:#eef2ff; color:#3730a3; font-size:.82rem; }
+.note { color:var(--muted); font-size:.92rem; padding:6px 2px; }
+@media (max-width: 720px) { .grid { grid-template-columns: 1fr; } .actions button { width:100%; } }

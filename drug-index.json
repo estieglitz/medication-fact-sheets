@@ -1,0 +1,2128 @@
+[
+  {
+    "id": "activated-prothrombin-complex-concentrate-anti-inhibitor-coagulant-complex",
+    "name": "Activated Prothrombin Complex Concentrate: Anti-Inhibitor Coagulant Complex",
+    "spanishName": "Concentrado de Complejo de Protrombina Activado: Complejo Coagulante Anti-Inhibidor",
+    "aliases": [
+      "Activated Prothrombin Complex Concentrate",
+      "Activated Prothrombin Complex Concentrate: Anti-Inhibitor Coagulant Complex",
+      "Anti-Inhibitor Coagulant Complex",
+      "Complejo Coagulante Anti-Inhibidor",
+      "Concentrado de Complejo de Protrombina Activado",
+      "Concentrado de Complejo de Protrombina Activado: Complejo Coagulante Anti-Inhibidor",
+      "FEIBA"
+    ],
+    "englishPages": [
+      3
+    ],
+    "spanishPages": [
+      139
+    ]
+  },
+  {
+    "id": "activated-recombinant-factor-vii",
+    "name": "Activated Recombinant Factor VII",
+    "spanishName": "Factor VII Activado Recombinante",
+    "aliases": [
+      "Activated Recombinant Factor VII",
+      "Factor VII Activado Recombinante",
+      "NovoSeven"
+    ],
+    "englishPages": [
+      4
+    ],
+    "spanishPages": [
+      140
+    ]
+  },
+  {
+    "id": "acyclovir",
+    "name": "Acyclovir",
+    "spanishName": "Aciclovir",
+    "aliases": [
+      "Aciclovir",
+      "Acyclovir",
+      "Zovirax"
+    ],
+    "englishPages": [
+      5
+    ],
+    "spanishPages": [
+      141
+    ]
+  },
+  {
+    "id": "aldesleukin",
+    "name": "Aldesleukin",
+    "spanishName": "Aldesleukina",
+    "aliases": [
+      "Aldesleukin",
+      "Aldesleukina",
+      "Interleukin-2"
+    ],
+    "englishPages": [
+      6
+    ],
+    "spanishPages": [
+      142
+    ]
+  },
+  {
+    "id": "alemtuzumab",
+    "name": "Alemtuzumab",
+    "spanishName": "Alemtuzumab",
+    "aliases": [
+      "Alemtuzumab",
+      "Campath"
+    ],
+    "englishPages": [
+      7
+    ],
+    "spanishPages": [
+      143,
+      144
+    ]
+  },
+  {
+    "id": "allopurinol",
+    "name": "Allopurinol",
+    "spanishName": "Alopurinol",
+    "aliases": [
+      "Allopurinol",
+      "Alopurinol",
+      "Zyloprim"
+    ],
+    "englishPages": [
+      8
+    ],
+    "spanishPages": [
+      145
+    ]
+  },
+  {
+    "id": "amifostine",
+    "name": "Amifostine",
+    "spanishName": "Amifostina",
+    "aliases": [
+      "Amifostina",
+      "Amifostine",
+      "Ethyol"
+    ],
+    "englishPages": [
+      9
+    ],
+    "spanishPages": [
+      146
+    ]
+  },
+  {
+    "id": "aminocaproic-acid",
+    "name": "Aminocaproic Acid",
+    "spanishName": "Ácido Aminocaproico",
+    "aliases": [
+      "Amicar",
+      "Aminocaproic Acid",
+      "Ácido Aminocaproico"
+    ],
+    "englishPages": [
+      10
+    ],
+    "spanishPages": [
+      147
+    ]
+  },
+  {
+    "id": "antithymocyte-globulin",
+    "name": "Antithymocyte Globulin",
+    "spanishName": "Globulina Antitimocítica",
+    "aliases": [
+      "ATGAM",
+      "Antithymocyte Globulin",
+      "Globulina Antitimocítica",
+      "Thymoglobulin"
+    ],
+    "englishPages": [
+      11
+    ],
+    "spanishPages": [
+      148
+    ]
+  },
+  {
+    "id": "aprepitant-fosaprepitant",
+    "name": "Aprepitant/Fosaprepitant",
+    "spanishName": "Aprepitant / Fosaprepitant",
+    "aliases": [
+      "Aprepitant",
+      "Aprepitant / Fosaprepitant",
+      "Aprepitant/Fosaprepitant",
+      "Emend",
+      "Fosaprepitant"
+    ],
+    "englishPages": [
+      12
+    ],
+    "spanishPages": [
+      149
+    ]
+  },
+  {
+    "id": "arsenic-trioxide",
+    "name": "Arsenic Trioxide",
+    "spanishName": "Trióxido de Arsénico",
+    "aliases": [
+      "Arsenic Trioxide",
+      "Trisenox",
+      "Trióxido de Arsénico"
+    ],
+    "englishPages": [
+      13,
+      14
+    ],
+    "spanishPages": [
+      150,
+      151
+    ]
+  },
+  {
+    "id": "asparaginase",
+    "name": "Asparaginase",
+    "spanishName": "Asparaginasa",
+    "aliases": [
+      "Asparaginasa",
+      "Asparaginase",
+      "Elspar",
+      "Erwinia",
+      "L-Asparaginase",
+      "Oncospar",
+      "PEG"
+    ],
+    "englishPages": [
+      15
+    ],
+    "spanishPages": [
+      152
+    ]
+  },
+  {
+    "id": "atovaquone",
+    "name": "Atovaquone",
+    "spanishName": "Atovacuona",
+    "aliases": [
+      "Atovacuona",
+      "Atovaquone",
+      "Mepron"
+    ],
+    "englishPages": [
+      16
+    ],
+    "spanishPages": [
+      153
+    ]
+  },
+  {
+    "id": "bevacizumab",
+    "name": "Bevacizumab",
+    "spanishName": "Bevacizumab",
+    "aliases": [
+      "Avastin",
+      "Bevacizumab"
+    ],
+    "englishPages": [
+      17
+    ],
+    "spanishPages": [
+      154
+    ]
+  },
+  {
+    "id": "bleomycin",
+    "name": "Bleomycin",
+    "spanishName": "Bleomicina",
+    "aliases": [
+      "Blenoxane",
+      "Bleomicina",
+      "Bleomycin"
+    ],
+    "englishPages": [
+      18
+    ],
+    "spanishPages": [
+      155
+    ]
+  },
+  {
+    "id": "blinatumomab",
+    "name": "Blinatumomab",
+    "spanishName": "Blinatumomab",
+    "aliases": [
+      "Blinatumomab",
+      "Blincyto"
+    ],
+    "englishPages": [
+      19,
+      20
+    ],
+    "spanishPages": [
+      156,
+      157
+    ]
+  },
+  {
+    "id": "busulfan",
+    "name": "Busulfan",
+    "spanishName": "Busulfán",
+    "aliases": [
+      "Busulfan",
+      "Busulfex",
+      "Busulfán",
+      "Myleran"
+    ],
+    "englishPages": [
+      21
+    ],
+    "spanishPages": [
+      158
+    ]
+  },
+  {
+    "id": "carboplatin",
+    "name": "Carboplatin",
+    "spanishName": "Carboplatino",
+    "aliases": [
+      "CBDCA",
+      "Carboplatin",
+      "Carboplatino",
+      "Paraplatin"
+    ],
+    "englishPages": [
+      22
+    ],
+    "spanishPages": [
+      159
+    ]
+  },
+  {
+    "id": "carmustine",
+    "name": "Carmustine",
+    "spanishName": "Carmustina",
+    "aliases": [
+      "BCNU",
+      "BiCNU",
+      "Carmustina",
+      "Carmustine"
+    ],
+    "englishPages": [
+      23
+    ],
+    "spanishPages": [
+      160
+    ]
+  },
+  {
+    "id": "caspofungin",
+    "name": "Caspofungin",
+    "spanishName": "Caspofungina",
+    "aliases": [
+      "Cancidas",
+      "Caspofungin",
+      "Caspofungina"
+    ],
+    "englishPages": [
+      24
+    ],
+    "spanishPages": [
+      161
+    ]
+  },
+  {
+    "id": "cidofovir",
+    "name": "Cidofovir",
+    "spanishName": "Cidofovir",
+    "aliases": [
+      "Cidofovir",
+      "Vistide"
+    ],
+    "englishPages": [
+      25
+    ],
+    "spanishPages": [
+      162
+    ]
+  },
+  {
+    "id": "cisplatin",
+    "name": "Cisplatin",
+    "spanishName": "Cisplatino",
+    "aliases": [
+      "CDDP",
+      "Cis-Platinum",
+      "Cisplatin",
+      "Cisplatino",
+      "Platinol"
+    ],
+    "englishPages": [
+      26
+    ],
+    "spanishPages": [
+      163
+    ]
+  },
+  {
+    "id": "cladribine",
+    "name": "Cladribine",
+    "spanishName": "Cladribina",
+    "aliases": [
+      "2-CdA",
+      "Cladribina",
+      "Cladribine",
+      "Leustatin"
+    ],
+    "englishPages": [
+      27
+    ],
+    "spanishPages": [
+      164
+    ]
+  },
+  {
+    "id": "clofarabine",
+    "name": "Clofarabine",
+    "spanishName": "Clofarabina",
+    "aliases": [
+      "Clofarabina",
+      "Clofarabine",
+      "Clolar"
+    ],
+    "englishPages": [
+      28,
+      29
+    ],
+    "spanishPages": [
+      165,
+      166
+    ]
+  },
+  {
+    "id": "colony-stimulating-factors-csf-g-csf-filgrastim-fill-gra-stim-gm-csf-sargramostim-sar-gram-oh-stim-peg-g-csf-pegfilgrastim-peg-fil-gra-stim",
+    "name": "Colony Stimulating Factors (CSF): G-CSF, Filgrastim (fill-GRA-stim) GM-CSF, Sargramostim (sar-GRAM-oh-stim) PEG-G-CSF, Pegfilgrastim (peg-fil-GRA-stim)",
+    "spanishName": "Factores Estimulantes de Colonias (CSF): G-CSF, Filgrastim GM-CSF, Sargramostim PEG-G-CSF, Peg ilgrastim",
+    "aliases": [
+      "Colony Stimulating Factors (CSF)",
+      "Colony Stimulating Factors (CSF): G-CSF, Filgrastim (fill-GRA-stim) GM-CSF, Sargramostim (sar-GRAM-oh-stim) PEG-G-CSF, Pegfilgrastim (peg-fil-GRA-stim)",
+      "Factores Estimulantes de Colonias (CSF)",
+      "Factores Estimulantes de Colonias (CSF): G-CSF, Filgrastim GM-CSF, Sargramostim PEG-G-CSF, Peg ilgrastim",
+      "G-CSF, Filgrastim (fill-GRA-stim) GM-CSF, Sargramostim (sar-GRAM-oh-stim) PEG-G-CSF, Pegfilgrastim (peg-fil-GRA-stim)",
+      "G-CSF, Filgrastim GM-CSF, Sargramostim PEG-G-CSF, Peg ilgrastim"
+    ],
+    "englishPages": [
+      30
+    ],
+    "spanishPages": [
+      167
+    ]
+  },
+  {
+    "id": "co-trimoxazole-sulfamethoxazole-trimethoprim",
+    "name": "Co-Trimoxazole: Sulfamethoxazole/Trimethoprim",
+    "spanishName": "Cotrimoxazol: Sulfametoxazol / Trimetoprim",
+    "aliases": [
+      "Bactrim",
+      "Co-Trimoxazole",
+      "Co-Trimoxazole: Sulfamethoxazole/Trimethoprim",
+      "Cotrimoxazol",
+      "Cotrimoxazol: Sulfametoxazol / Trimetoprim",
+      "Septra",
+      "Sulfamethoxazole",
+      "Sulfametoxazol",
+      "Trimethoprim",
+      "Trimethoprimsulfa",
+      "Trimetoprim"
+    ],
+    "englishPages": [
+      31
+    ],
+    "spanishPages": [
+      168
+    ]
+  },
+  {
+    "id": "cyclophosphamide",
+    "name": "Cyclophosphamide",
+    "spanishName": "Ciclofosfamida",
+    "aliases": [
+      "Ciclofosfamida",
+      "Cyclophosphamide",
+      "Cytoxan"
+    ],
+    "englishPages": [
+      32
+    ],
+    "spanishPages": [
+      169
+    ]
+  },
+  {
+    "id": "cyclosporine",
+    "name": "Cyclosporine",
+    "spanishName": "Ciclosporina",
+    "aliases": [
+      "Ciclosporina",
+      "Cyclosporine",
+      "Gengraf",
+      "Neoral",
+      "Sandimmune"
+    ],
+    "englishPages": [
+      33
+    ],
+    "spanishPages": [
+      170
+    ]
+  },
+  {
+    "id": "cytarabine",
+    "name": "Cytarabine",
+    "spanishName": "Citarabina",
+    "aliases": [
+      "Ara-C",
+      "Citarabina",
+      "Cytarabine",
+      "Cytosar-U",
+      "Cytosine Arabinoside"
+    ],
+    "englishPages": [
+      34
+    ],
+    "spanishPages": [
+      171
+    ]
+  },
+  {
+    "id": "dacarbazine",
+    "name": "Dacarbazine",
+    "spanishName": "Dacarbacina",
+    "aliases": [
+      "DTIC",
+      "Dacarbacina",
+      "Dacarbazine"
+    ],
+    "englishPages": [
+      35
+    ],
+    "spanishPages": [
+      172
+    ]
+  },
+  {
+    "id": "daclizumab",
+    "name": "Daclizumab",
+    "spanishName": "Daclizumab",
+    "aliases": [
+      "Daclizumab",
+      "Zenapax"
+    ],
+    "englishPages": [
+      36
+    ],
+    "spanishPages": [
+      173
+    ]
+  },
+  {
+    "id": "dactinomycin",
+    "name": "Dactinomycin",
+    "spanishName": "Dactinomicina",
+    "aliases": [
+      "Actinomycin-D",
+      "Cosmegen",
+      "Dactinomicina",
+      "Dactinomycin"
+    ],
+    "englishPages": [
+      37
+    ],
+    "spanishPages": [
+      174
+    ]
+  },
+  {
+    "id": "dapsone",
+    "name": "Dapsone",
+    "spanishName": "Dapsona",
+    "aliases": [
+      "Avlosulfon",
+      "Dapsona",
+      "Dapsone"
+    ],
+    "englishPages": [
+      38
+    ],
+    "spanishPages": [
+      175
+    ]
+  },
+  {
+    "id": "dasatinib",
+    "name": "Dasatinib",
+    "spanishName": "Dasatinib",
+    "aliases": [
+      "Dasatinib",
+      "Sprycel"
+    ],
+    "englishPages": [
+      39,
+      40
+    ],
+    "spanishPages": [
+      176,
+      177
+    ]
+  },
+  {
+    "id": "daunorubicin",
+    "name": "Daunorubicin",
+    "spanishName": "Daunorrubicina",
+    "aliases": [
+      "Cerubidine",
+      "Daunomycin",
+      "Daunorrubicina",
+      "Daunorubicin"
+    ],
+    "englishPages": [
+      41
+    ],
+    "spanishPages": [
+      178
+    ]
+  },
+  {
+    "id": "deferasirox",
+    "name": "Deferasirox",
+    "spanishName": "Deferasirox",
+    "aliases": [
+      "Deferasirox",
+      "Exjade",
+      "Jadenu"
+    ],
+    "englishPages": [
+      42
+    ],
+    "spanishPages": [
+      179
+    ]
+  },
+  {
+    "id": "deferoxamine",
+    "name": "Deferoxamine",
+    "spanishName": "Deferoxamina",
+    "aliases": [
+      "Deferoxamina",
+      "Deferoxamine",
+      "Desferal"
+    ],
+    "englishPages": [
+      43
+    ],
+    "spanishPages": [
+      180
+    ]
+  },
+  {
+    "id": "defibrotide",
+    "name": "Defibrotide",
+    "spanishName": "Defibrotida",
+    "aliases": [
+      "Dasovas",
+      "Defibrotida",
+      "Defibrotide",
+      "Noravid",
+      "Prociclide"
+    ],
+    "englishPages": [
+      44
+    ],
+    "spanishPages": [
+      181
+    ]
+  },
+  {
+    "id": "denileukin-diftitox",
+    "name": "Denileukin Diftitox",
+    "spanishName": "Denileukin Diftitox",
+    "aliases": [
+      "Denileukin Diftitox",
+      "Ontak"
+    ],
+    "englishPages": [
+      45
+    ],
+    "spanishPages": [
+      182
+    ]
+  },
+  {
+    "id": "desmopressin-acetate",
+    "name": "Desmopressin Acetate",
+    "spanishName": "Acetato de Desmopresina",
+    "aliases": [
+      "Acetato de Desmopresina",
+      "DDAVP",
+      "Desmopressin Acetate",
+      "Stimate"
+    ],
+    "englishPages": [
+      46
+    ],
+    "spanishPages": [
+      183
+    ]
+  },
+  {
+    "id": "dexamethasone",
+    "name": "Dexamethasone",
+    "spanishName": "Dexametasona",
+    "aliases": [
+      "Decadron",
+      "Dexametasona",
+      "Dexamethasone"
+    ],
+    "englishPages": [
+      47
+    ],
+    "spanishPages": [
+      184
+    ]
+  },
+  {
+    "id": "dexrazoxane",
+    "name": "Dexrazoxane",
+    "spanishName": "Dexrazoxano",
+    "aliases": [
+      "Dexrazoxane",
+      "Dexrazoxano",
+      "Zinecard"
+    ],
+    "englishPages": [
+      48
+    ],
+    "spanishPages": [
+      185
+    ]
+  },
+  {
+    "id": "dinutuximab",
+    "name": "Dinutuximab",
+    "spanishName": "Dinutuximab",
+    "aliases": [
+      "Dinutuximab",
+      "Unituxin"
+    ],
+    "englishPages": [
+      49
+    ],
+    "spanishPages": [
+      186
+    ]
+  },
+  {
+    "id": "docetaxel",
+    "name": "Docetaxel",
+    "spanishName": "Docetaxel",
+    "aliases": [
+      "Docetaxel",
+      "Taxotere"
+    ],
+    "englishPages": [
+      50
+    ],
+    "spanishPages": [
+      187
+    ]
+  },
+  {
+    "id": "doxorubicin",
+    "name": "Doxorubicin",
+    "spanishName": "Doxorrubicina",
+    "aliases": [
+      "Adriamycin",
+      "Doxorrubicina",
+      "Doxorubicin"
+    ],
+    "englishPages": [
+      51
+    ],
+    "spanishPages": [
+      188
+    ]
+  },
+  {
+    "id": "eculizumab",
+    "name": "Eculizumab",
+    "spanishName": "Eculizumab",
+    "aliases": [
+      "Eculizumab",
+      "Soliris"
+    ],
+    "englishPages": [
+      52
+    ],
+    "spanishPages": [
+      189
+    ]
+  },
+  {
+    "id": "enoxaparin",
+    "name": "Enoxaparin",
+    "spanishName": "Enoxaparina",
+    "aliases": [
+      "Enoxaparin",
+      "Enoxaparina",
+      "Lovenox"
+    ],
+    "englishPages": [
+      53
+    ],
+    "spanishPages": [
+      190
+    ]
+  },
+  {
+    "id": "epratuzumab",
+    "name": "Epratuzumab",
+    "spanishName": "Epratuzumab",
+    "aliases": [
+      "Epratuzumab",
+      "LymphoCide"
+    ],
+    "englishPages": [
+      54
+    ],
+    "spanishPages": [
+      191
+    ]
+  },
+  {
+    "id": "erlotinib",
+    "name": "Erlotinib",
+    "spanishName": "Erlotinib",
+    "aliases": [
+      "Erlotinib",
+      "Tarceva"
+    ],
+    "englishPages": [
+      55
+    ],
+    "spanishPages": [
+      192,
+      193
+    ]
+  },
+  {
+    "id": "etanercept",
+    "name": "Etanercept",
+    "spanishName": "Etanercept",
+    "aliases": [
+      "Enbrel",
+      "Etanercept"
+    ],
+    "englishPages": [
+      56
+    ],
+    "spanishPages": [
+      194
+    ]
+  },
+  {
+    "id": "etoposide",
+    "name": "Etoposide",
+    "spanishName": "Etopósido",
+    "aliases": [
+      "Etoposide",
+      "Etopósido",
+      "VP-16",
+      "VePesid"
+    ],
+    "englishPages": [
+      57
+    ],
+    "spanishPages": [
+      195
+    ]
+  },
+  {
+    "id": "everolimus",
+    "name": "Everolimus",
+    "spanishName": "Everolimus",
+    "aliases": [
+      "Afinitor",
+      "Everolimus"
+    ],
+    "englishPages": [
+      58,
+      59
+    ],
+    "spanishPages": [
+      196,
+      197
+    ]
+  },
+  {
+    "id": "fluconazole",
+    "name": "Fluconazole",
+    "spanishName": "Fluconazol",
+    "aliases": [
+      "Diflucan",
+      "Fluconazol",
+      "Fluconazole"
+    ],
+    "englishPages": [
+      60
+    ],
+    "spanishPages": [
+      198
+    ]
+  },
+  {
+    "id": "fludarabine",
+    "name": "Fludarabine",
+    "spanishName": "Fludarabina",
+    "aliases": [
+      "F-ara-AMP",
+      "Fludara",
+      "Fludarabina",
+      "Fludarabine"
+    ],
+    "englishPages": [
+      61
+    ],
+    "spanishPages": [
+      199
+    ]
+  },
+  {
+    "id": "fluorouracil",
+    "name": "Fluorouracil",
+    "spanishName": "Fluorouracilo",
+    "aliases": [
+      "5-FU",
+      "Efudex",
+      "Fluorouracil",
+      "Fluorouracilo"
+    ],
+    "englishPages": [
+      62
+    ],
+    "spanishPages": [
+      200
+    ]
+  },
+  {
+    "id": "folic-acid",
+    "name": "Folic Acid",
+    "spanishName": "Ácido Fólico",
+    "aliases": [
+      "Folate",
+      "Folic Acid",
+      "Vitamin B9",
+      "Ácido Fólico"
+    ],
+    "englishPages": [
+      63
+    ],
+    "spanishPages": [
+      201
+    ]
+  },
+  {
+    "id": "foscarnet",
+    "name": "Foscarnet",
+    "spanishName": "Foscarnet",
+    "aliases": [
+      "Foscarnet",
+      "Foscavir"
+    ],
+    "englishPages": [
+      64
+    ],
+    "spanishPages": [
+      202
+    ]
+  },
+  {
+    "id": "gabapentin",
+    "name": "Gabapentin",
+    "spanishName": "Gabapentina",
+    "aliases": [
+      "Gabapentin",
+      "Gabapentina",
+      "Neurontin"
+    ],
+    "englishPages": [
+      65
+    ],
+    "spanishPages": [
+      203
+    ]
+  },
+  {
+    "id": "ganciclovir",
+    "name": "Ganciclovir",
+    "spanishName": "Ganciclovir",
+    "aliases": [
+      "Cytovene",
+      "DHPG",
+      "Ganciclovir"
+    ],
+    "englishPages": [
+      66
+    ],
+    "spanishPages": [
+      204
+    ]
+  },
+  {
+    "id": "gemcitabine",
+    "name": "Gemcitabine",
+    "spanishName": "Gemcitabina",
+    "aliases": [
+      "Gemcitabina",
+      "Gemcitabine",
+      "Gemzar"
+    ],
+    "englishPages": [
+      67
+    ],
+    "spanishPages": [
+      205
+    ]
+  },
+  {
+    "id": "gemtuzumab-ozogamicin",
+    "name": "Gemtuzumab Ozogamicin",
+    "spanishName": "Gemtuzumab Ozogamicina",
+    "aliases": [
+      "Gemtuzumab Ozogamicin",
+      "Gemtuzumab Ozogamicina",
+      "Mylotarg"
+    ],
+    "englishPages": [
+      68
+    ],
+    "spanishPages": [
+      206
+    ]
+  },
+  {
+    "id": "glucarpidase",
+    "name": "Glucarpidase",
+    "spanishName": "Glucarpidasa",
+    "aliases": [
+      "Glucarpidasa",
+      "Glucarpidase",
+      "VORAXAZE"
+    ],
+    "englishPages": [
+      69
+    ],
+    "spanishPages": [
+      207
+    ]
+  },
+  {
+    "id": "glutamine",
+    "name": "Glutamine",
+    "spanishName": "Glutamina",
+    "aliases": [
+      "Enterex",
+      "Glutamina",
+      "Glutamine"
+    ],
+    "englishPages": [
+      70
+    ],
+    "spanishPages": [
+      208
+    ]
+  },
+  {
+    "id": "granisetron",
+    "name": "Granisetron",
+    "spanishName": "Granisetron",
+    "aliases": [
+      "Granisetron",
+      "Kytril"
+    ],
+    "englishPages": [
+      71
+    ],
+    "spanishPages": [
+      209
+    ]
+  },
+  {
+    "id": "histamine-h2-antagonist-ranitidine-famotidine",
+    "name": "Histamine H2 Antagonist: Ranitidine Famotidine",
+    "spanishName": "Antagonistas de Histamina H2: Ranitidine Famotidine",
+    "aliases": [
+      "Antagonistas de Histamina H2",
+      "Antagonistas de Histamina H2: Ranitidine Famotidine",
+      "Histamine H2 Antagonist",
+      "Histamine H2 Antagonist: Ranitidine Famotidine",
+      "Ranitidine Famotidine"
+    ],
+    "englishPages": [
+      72
+    ],
+    "spanishPages": [
+      210
+    ]
+  },
+  {
+    "id": "hydrocortisone",
+    "name": "Hydrocortisone",
+    "spanishName": "Hidrocortisona",
+    "aliases": [
+      "A-Hydrocort",
+      "Cortef",
+      "Hidrocortisona",
+      "Hydrocortisone",
+      "Solu-Cortef"
+    ],
+    "englishPages": [
+      73
+    ],
+    "spanishPages": [
+      211
+    ]
+  },
+  {
+    "id": "hydroxyurea",
+    "name": "Hydroxyurea",
+    "spanishName": "Hidroxiurea",
+    "aliases": [
+      "Hidroxiurea",
+      "Hydrea",
+      "Hydroxyurea"
+    ],
+    "englishPages": [
+      74
+    ],
+    "spanishPages": [
+      212
+    ]
+  },
+  {
+    "id": "hydroxyzine",
+    "name": "Hydroxyzine",
+    "spanishName": "Hidroxizina",
+    "aliases": [
+      "Atarax",
+      "Hidroxizina",
+      "Hydroxyzine",
+      "Vistaril"
+    ],
+    "englishPages": [
+      75
+    ],
+    "spanishPages": [
+      213
+    ]
+  },
+  {
+    "id": "idarubicin",
+    "name": "Idarubicin",
+    "spanishName": "Idarubicina",
+    "aliases": [
+      "Idamycin",
+      "Idarubicin",
+      "Idarubicina"
+    ],
+    "englishPages": [
+      76
+    ],
+    "spanishPages": [
+      214
+    ]
+  },
+  {
+    "id": "ifosfamide",
+    "name": "Ifosfamide",
+    "spanishName": "Ifosfamida",
+    "aliases": [
+      "Ifex",
+      "Ifosfamida",
+      "Ifosfamide"
+    ],
+    "englishPages": [
+      77
+    ],
+    "spanishPages": [
+      215
+    ]
+  },
+  {
+    "id": "imatinib-mesylate",
+    "name": "Imatinib Mesylate",
+    "spanishName": "Mesilato de imatinib",
+    "aliases": [
+      "Coumadin",
+      "Imatinib Mesylate",
+      "Mesilato de imatinib"
+    ],
+    "englishPages": [
+      78
+    ],
+    "spanishPages": [
+      216
+    ]
+  },
+  {
+    "id": "indomethacin",
+    "name": "Indomethacin",
+    "spanishName": "Indometacina",
+    "aliases": [
+      "Indocin",
+      "Indometacina",
+      "Indomethacin",
+      "TIVORBEX"
+    ],
+    "englishPages": [
+      79
+    ],
+    "spanishPages": [
+      217
+    ]
+  },
+  {
+    "id": "infliximab",
+    "name": "Infliximab",
+    "spanishName": "Infliximab",
+    "aliases": [
+      "Infliximab",
+      "REMICADE"
+    ],
+    "englishPages": [
+      80
+    ],
+    "spanishPages": [
+      218,
+      219
+    ]
+  },
+  {
+    "id": "interferon",
+    "name": "Interferon",
+    "spanishName": "Interferón",
+    "aliases": [
+      "Alpha",
+      "Beta",
+      "Gamma",
+      "Interferon",
+      "Interferón"
+    ],
+    "englishPages": [
+      81
+    ],
+    "spanishPages": [
+      220
+    ]
+  },
+  {
+    "id": "intravenous-immune-globulin",
+    "name": "Intravenous Immune Globulin",
+    "spanishName": "Inmunoglobulina Intravenosa",
+    "aliases": [
+      "IVIG",
+      "IgG",
+      "Inmunoglobulina Intravenosa",
+      "Intravenous Immune Globulin",
+      "immunoglobulin G",
+      "intravenous immunoglobulin"
+    ],
+    "englishPages": [
+      82
+    ],
+    "spanishPages": [
+      221
+    ]
+  },
+  {
+    "id": "irinotecan",
+    "name": "Irinotecan",
+    "spanishName": "Irinotecán",
+    "aliases": [
+      "Camptosar",
+      "Irinotecan",
+      "Irinotecán"
+    ],
+    "englishPages": [
+      83
+    ],
+    "spanishPages": [
+      222
+    ]
+  },
+  {
+    "id": "isotretinoin",
+    "name": "Isotretinoin",
+    "spanishName": "Isotretinoína",
+    "aliases": [
+      "13-Cis-Retinoic Acid",
+      "Accutane",
+      "Isotretinoin",
+      "Isotretinoína",
+      "Retinoic Acid"
+    ],
+    "englishPages": [
+      84,
+      85
+    ],
+    "spanishPages": [
+      223,
+      224
+    ]
+  },
+  {
+    "id": "ketorolac",
+    "name": "Ketorolac",
+    "spanishName": "Ketorolaco",
+    "aliases": [
+      "Ketorolac",
+      "Ketorolaco",
+      "Toradol"
+    ],
+    "englishPages": [
+      86
+    ],
+    "spanishPages": [
+      225
+    ]
+  },
+  {
+    "id": "leucovorin",
+    "name": "Leucovorin",
+    "spanishName": "Leucovorina",
+    "aliases": [
+      "Leucovorin",
+      "Leucovorina",
+      "Wellcovorin"
+    ],
+    "englishPages": [
+      87
+    ],
+    "spanishPages": [
+      226
+    ]
+  },
+  {
+    "id": "liposomal-amphotericin-b",
+    "name": "Liposomal Amphotericin B",
+    "spanishName": "Anfotericina B Liposomal",
+    "aliases": [
+      "AmBisome",
+      "Anfotericina B Liposomal",
+      "Liposomal Amphotericin B"
+    ],
+    "englishPages": [
+      88
+    ],
+    "spanishPages": [
+      227
+    ]
+  },
+  {
+    "id": "liposomal-cytarabine",
+    "name": "Liposomal Cytarabine",
+    "spanishName": "Citarabina Liposomal",
+    "aliases": [
+      "Citarabina Liposomal",
+      "DepoCyt",
+      "Liposomal Cytarabine"
+    ],
+    "englishPages": [
+      89
+    ],
+    "spanishPages": [
+      228
+    ]
+  },
+  {
+    "id": "liposomal-doxorubicin",
+    "name": "Liposomal Doxorubicin",
+    "spanishName": "Doxorrubicina Liposomal",
+    "aliases": [
+      "Caelyx",
+      "Doxil",
+      "Doxorrubicina Liposomal",
+      "Liposomal Doxorubicin",
+      "Myocet"
+    ],
+    "englishPages": [
+      90
+    ],
+    "spanishPages": [
+      229
+    ]
+  },
+  {
+    "id": "lomustine",
+    "name": "Lomustine",
+    "spanishName": "Lomustine",
+    "aliases": [
+      "CCNU",
+      "Lomustine"
+    ],
+    "englishPages": [
+      91
+    ],
+    "spanishPages": [
+      230
+    ]
+  },
+  {
+    "id": "lorazepam",
+    "name": "Lorazepam",
+    "spanishName": "Lorazepam",
+    "aliases": [
+      "Ativan",
+      "Lorazepam"
+    ],
+    "englishPages": [
+      92
+    ],
+    "spanishPages": [
+      231
+    ]
+  },
+  {
+    "id": "mechlorethamine",
+    "name": "Mechlorethamine",
+    "spanishName": "Mecloretamina",
+    "aliases": [
+      "Mechlorethamine",
+      "Mecloretamina",
+      "Mustargen",
+      "Nitrogen Mustard"
+    ],
+    "englishPages": [
+      93
+    ],
+    "spanishPages": [
+      232
+    ]
+  },
+  {
+    "id": "melphalan",
+    "name": "Melphalan",
+    "spanishName": "Melfalán",
+    "aliases": [
+      "Alkeran",
+      "L-Pam",
+      "Melfalán",
+      "Melphalan",
+      "Phenylalanine Mustard"
+    ],
+    "englishPages": [
+      94
+    ],
+    "spanishPages": [
+      233
+    ]
+  },
+  {
+    "id": "mercaptopurine",
+    "name": "Mercaptopurine",
+    "spanishName": "Mercaptopurina",
+    "aliases": [
+      "6-MP",
+      "Mercaptopurina",
+      "Mercaptopurine",
+      "Purinethol",
+      "Purixan"
+    ],
+    "englishPages": [
+      95
+    ],
+    "spanishPages": [
+      234
+    ]
+  },
+  {
+    "id": "mesna",
+    "name": "Mesna",
+    "spanishName": "Mesna",
+    "aliases": [
+      "Mesna",
+      "Mesnex"
+    ],
+    "englishPages": [
+      96
+    ],
+    "spanishPages": [
+      235
+    ]
+  },
+  {
+    "id": "methotrexate",
+    "name": "Methotrexate",
+    "spanishName": "Metotrexato",
+    "aliases": [
+      "Amethopterin",
+      "MTX",
+      "Methotrexate",
+      "Metotrexato",
+      "Rheumatrex",
+      "Trexall"
+    ],
+    "englishPages": [
+      97
+    ],
+    "spanishPages": [
+      236
+    ]
+  },
+  {
+    "id": "micafungin",
+    "name": "Micafungin",
+    "spanishName": "Micafungina",
+    "aliases": [
+      "Micafungin",
+      "Micafungina",
+      "Mycamine"
+    ],
+    "englishPages": [
+      98
+    ],
+    "spanishPages": [
+      237
+    ]
+  },
+  {
+    "id": "mitoxantrone",
+    "name": "Mitoxantrone",
+    "spanishName": "Mitoxantrona",
+    "aliases": [
+      "Mitoxantrona",
+      "Mitoxantrone",
+      "Novantrone"
+    ],
+    "englishPages": [
+      99
+    ],
+    "spanishPages": [
+      238
+    ]
+  },
+  {
+    "id": "mycophenolate",
+    "name": "Mycophenolate",
+    "spanishName": "Micofenolato",
+    "aliases": [
+      "CellCept",
+      "MMF",
+      "Micofenolato",
+      "Mycophenolate"
+    ],
+    "englishPages": [
+      100
+    ],
+    "spanishPages": [
+      239
+    ]
+  },
+  {
+    "id": "nelarabine",
+    "name": "Nelarabine",
+    "spanishName": "Nelarabina",
+    "aliases": [
+      "Arranon",
+      "Nelarabina",
+      "Nelarabine"
+    ],
+    "englishPages": [
+      101
+    ],
+    "spanishPages": [
+      240
+    ]
+  },
+  {
+    "id": "nilotinib",
+    "name": "Nilotinib",
+    "spanishName": "Nilotinib",
+    "aliases": [
+      "Nilotinib",
+      "Tasigna"
+    ],
+    "englishPages": [
+      102
+    ],
+    "spanishPages": [
+      241,
+      242
+    ]
+  },
+  {
+    "id": "nystatin-clotrimazole",
+    "name": "Nystatin/Clotrimazole",
+    "spanishName": "Nistatina / Clotrimazol",
+    "aliases": [
+      "Clotrimazol",
+      "Clotrimazole",
+      "Mycelex Troche",
+      "Mycostatin",
+      "Nistatina",
+      "Nistatina / Clotrimazol",
+      "Nystatin",
+      "Nystatin/Clotrimazole"
+    ],
+    "englishPages": [
+      103
+    ],
+    "spanishPages": [
+      243
+    ]
+  },
+  {
+    "id": "ondansetron",
+    "name": "Ondansetron",
+    "spanishName": "Ondansetrón",
+    "aliases": [
+      "Ondansetron",
+      "Ondansetrón",
+      "Zofran"
+    ],
+    "englishPages": [
+      104
+    ],
+    "spanishPages": [
+      244
+    ]
+  },
+  {
+    "id": "oxaliplatin",
+    "name": "Oxaliplatin",
+    "spanishName": "Oxaliplatino",
+    "aliases": [
+      "Dacplat",
+      "Eloxatin",
+      "Oxaliplatin",
+      "Oxaliplatino"
+    ],
+    "englishPages": [
+      105
+    ],
+    "spanishPages": [
+      245
+    ]
+  },
+  {
+    "id": "paclitaxel",
+    "name": "Paclitaxel",
+    "spanishName": "Paclitaxel",
+    "aliases": [
+      "Paclitaxel",
+      "Taxol"
+    ],
+    "englishPages": [
+      106
+    ],
+    "spanishPages": [
+      246
+    ]
+  },
+  {
+    "id": "pemetrexed",
+    "name": "Pemetrexed",
+    "spanishName": "Pemetrexed",
+    "aliases": [
+      "Alimta",
+      "Pemetrexed"
+    ],
+    "englishPages": [
+      107
+    ],
+    "spanishPages": [
+      247
+    ]
+  },
+  {
+    "id": "pentamidine",
+    "name": "Pentamidine",
+    "spanishName": "Pentamidina",
+    "aliases": [
+      "NebuPent",
+      "Pentam 300",
+      "Pentamidina",
+      "Pentamidine"
+    ],
+    "englishPages": [
+      108
+    ],
+    "spanishPages": [
+      248
+    ]
+  },
+  {
+    "id": "pentostatin",
+    "name": "Pentostatin",
+    "spanishName": "Pentostatina",
+    "aliases": [
+      "Nipent",
+      "Pentostatin",
+      "Pentostatina"
+    ],
+    "englishPages": [
+      109
+    ],
+    "spanishPages": [
+      249
+    ]
+  },
+  {
+    "id": "plerixafor",
+    "name": "Plerixafor",
+    "spanishName": "Plerixafor",
+    "aliases": [
+      "Mozobil",
+      "Plerixafor"
+    ],
+    "englishPages": [
+      110
+    ],
+    "spanishPages": [
+      250
+    ]
+  },
+  {
+    "id": "prednisone-methylprednisolone",
+    "name": "Prednisone Methylprednisolone",
+    "spanishName": "Prednisona Metilprednisolona",
+    "aliases": [
+      "Deltasone",
+      "Prednisona Metilprednisolona",
+      "Prednisone Methylprednisolone",
+      "Solu-Medrol"
+    ],
+    "englishPages": [
+      111
+    ],
+    "spanishPages": [
+      251
+    ]
+  },
+  {
+    "id": "procarbazine",
+    "name": "Procarbazine",
+    "spanishName": "Procarbazina",
+    "aliases": [
+      "Matulane",
+      "Procarbazina",
+      "Procarbazine"
+    ],
+    "englishPages": [
+      112
+    ],
+    "spanishPages": [
+      252
+    ]
+  },
+  {
+    "id": "propranolol",
+    "name": "Propranolol",
+    "spanishName": "Propranolol",
+    "aliases": [
+      "Hemangeol™",
+      "Propranolol"
+    ],
+    "englishPages": [
+      113
+    ],
+    "spanishPages": [
+      253
+    ]
+  },
+  {
+    "id": "proton-pump-inhibitors-lansoprazole-omeprazole-esomeprazole",
+    "name": "Proton Pump Inhibitors: Lansoprazole Omeprazole Esomeprazole",
+    "spanishName": "Inhibidores de la Bomba de Protones: Lansoprazol Omeprazol Esomeprazol",
+    "aliases": [
+      "Inhibidores de la Bomba de Protones",
+      "Inhibidores de la Bomba de Protones: Lansoprazol Omeprazol Esomeprazol",
+      "Lansoprazol Omeprazol Esomeprazol",
+      "Lansoprazole Omeprazole Esomeprazole",
+      "Proton Pump Inhibitors",
+      "Proton Pump Inhibitors: Lansoprazole Omeprazole Esomeprazole"
+    ],
+    "englishPages": [
+      114
+    ],
+    "spanishPages": [
+      254
+    ]
+  },
+  {
+    "id": "rasburicase",
+    "name": "Rasburicase",
+    "spanishName": "Rasburicase",
+    "aliases": [
+      "Elitek",
+      "Rasburicase"
+    ],
+    "englishPages": [
+      115
+    ],
+    "spanishPages": [
+      255
+    ]
+  },
+  {
+    "id": "recombinant-factor-ix",
+    "name": "Recombinant Factor IX",
+    "spanishName": "Factor IX Recombinante",
+    "aliases": [
+      "BeneFIX",
+      "Factor IX Recombinante",
+      "Recombinant Factor IX"
+    ],
+    "englishPages": [
+      116
+    ],
+    "spanishPages": [
+      256
+    ]
+  },
+  {
+    "id": "recombinant-factor-viii-1st-generation-recombinate-2nd-generation-kogenate-fs-bayer-helixate-fs-csl-behring-and-refacto-3rd-generation-advate-baxter-and-xyntha",
+    "name": "Recombinant Factor VIII 1st Generation—Recombinate™ 2nd Generation—Kogenate® FS (Bayer), Helixate® FS (CSL Behring), and ReFacto® 3rd Generation—ADVATE® (Baxter) and XYNTHA®",
+    "spanishName": "Factor VIII Recombinante 1ra Generación—Recombinate™ 2da Generación—Kogenate® FS (Bayer), Helixate® FS (CSL Behring), and ReFacto® 3ra Generación—ADVATE® (Baxter) and XYNTHA®",
+    "aliases": [
+      "Factor VIII Recombinante 1ra Generación—Recombinate™ 2da Generación—Kogenate® FS (Bayer), Helixate® FS (CSL Behring), and ReFacto® 3ra Generación—ADVATE® (Baxter) and XYNTHA®",
+      "Recombinant Factor VIII 1st Generation—Recombinate™ 2nd Generation—Kogenate® FS (Bayer), Helixate® FS (CSL Behring), and ReFacto® 3rd Generation—ADVATE® (Baxter) and XYNTHA®"
+    ],
+    "englishPages": [
+      117
+    ],
+    "spanishPages": [
+      257
+    ]
+  },
+  {
+    "id": "rho-d-immune-globulin",
+    "name": "Rho(D) Immune Globulin",
+    "spanishName": "Rho (D) Inmunoglobulina",
+    "aliases": [
+      "Rho (D) Inmunoglobulina",
+      "Rho(D) Immune Globulin",
+      "WinRho SDF"
+    ],
+    "englishPages": [
+      118
+    ],
+    "spanishPages": [
+      258
+    ]
+  },
+  {
+    "id": "rituximab",
+    "name": "Rituximab",
+    "spanishName": "Rituximab",
+    "aliases": [
+      "Rituxan",
+      "Rituximab"
+    ],
+    "englishPages": [
+      119
+    ],
+    "spanishPages": [
+      259
+    ]
+  },
+  {
+    "id": "sirolimus",
+    "name": "Sirolimus",
+    "spanishName": "Sirolimus",
+    "aliases": [
+      "Rapamune",
+      "Sirolimus"
+    ],
+    "englishPages": [
+      120
+    ],
+    "spanishPages": [
+      260
+    ]
+  },
+  {
+    "id": "sorafenib",
+    "name": "Sorafenib",
+    "spanishName": "Sorafenib",
+    "aliases": [
+      "NEXAVAR",
+      "Sorafenib"
+    ],
+    "englishPages": [
+      121
+    ],
+    "spanishPages": [
+      261
+    ]
+  },
+  {
+    "id": "tacrolimus",
+    "name": "Tacrolimus",
+    "spanishName": "Tacrolimús",
+    "aliases": [
+      "FK-506",
+      "Prograf",
+      "Tacrolimus",
+      "Tacrolimús"
+    ],
+    "englishPages": [
+      122
+    ],
+    "spanishPages": [
+      262
+    ]
+  },
+  {
+    "id": "temozolomide",
+    "name": "Temozolomide",
+    "spanishName": "Temozolomida",
+    "aliases": [
+      "Temodar",
+      "Temozolomida",
+      "Temozolomide"
+    ],
+    "englishPages": [
+      123
+    ],
+    "spanishPages": [
+      263
+    ]
+  },
+  {
+    "id": "temsirolimus",
+    "name": "Temsirolimus",
+    "spanishName": "Temsirolimus",
+    "aliases": [
+      "Temsirolimus",
+      "Torisel"
+    ],
+    "englishPages": [
+      124
+    ],
+    "spanishPages": [
+      264
+    ]
+  },
+  {
+    "id": "thalidomide",
+    "name": "Thalidomide",
+    "spanishName": "Talidomida",
+    "aliases": [
+      "Talidomida",
+      "Thalidomide",
+      "Thalomid"
+    ],
+    "englishPages": [
+      125
+    ],
+    "spanishPages": [
+      265
+    ]
+  },
+  {
+    "id": "thioguanine",
+    "name": "Thioguanine",
+    "spanishName": "Tioguanina",
+    "aliases": [
+      "6-TG",
+      "Tabloid",
+      "Thioguanine",
+      "Tioguanina"
+    ],
+    "englishPages": [
+      126
+    ],
+    "spanishPages": [
+      266
+    ]
+  },
+  {
+    "id": "thiotepa",
+    "name": "Thiotepa",
+    "spanishName": "Tiotepa",
+    "aliases": [
+      "TESPA",
+      "Thioplex",
+      "Thiotepa",
+      "Tiotepa"
+    ],
+    "englishPages": [
+      127,
+      128
+    ],
+    "spanishPages": [
+      267,
+      268
+    ]
+  },
+  {
+    "id": "topotecan",
+    "name": "Topotecan",
+    "spanishName": "Topotecán",
+    "aliases": [
+      "Hycamtin",
+      "Topotecan",
+      "Topotecán"
+    ],
+    "englishPages": [
+      129
+    ],
+    "spanishPages": [
+      269
+    ]
+  },
+  {
+    "id": "trastuzumab",
+    "name": "Trastuzumab",
+    "spanishName": "Trastuzumab",
+    "aliases": [
+      "Herceptin",
+      "Trastuzumab"
+    ],
+    "englishPages": [
+      130
+    ],
+    "spanishPages": [
+      270
+    ]
+  },
+  {
+    "id": "ursodiol",
+    "name": "Ursodiol",
+    "spanishName": "Ursodiol",
+    "aliases": [
+      "Actigall",
+      "Ursodiol"
+    ],
+    "englishPages": [
+      131
+    ],
+    "spanishPages": [
+      271
+    ]
+  },
+  {
+    "id": "valacyclovir",
+    "name": "Valacyclovir",
+    "spanishName": "Valaciclovir",
+    "aliases": [
+      "Valaciclovir",
+      "Valacyclovir",
+      "Valtrex"
+    ],
+    "englishPages": [
+      132
+    ],
+    "spanishPages": [
+      272
+    ]
+  },
+  {
+    "id": "vinblastine",
+    "name": "Vinblastine",
+    "spanishName": "Vinblastina",
+    "aliases": [
+      "Velban",
+      "Vinblastina",
+      "Vinblastine"
+    ],
+    "englishPages": [
+      133
+    ],
+    "spanishPages": [
+      273
+    ]
+  },
+  {
+    "id": "vincristine",
+    "name": "Vincristine",
+    "spanishName": "Vincristina",
+    "aliases": [
+      "Oncovin",
+      "Vincristina",
+      "Vincristine"
+    ],
+    "englishPages": [
+      134
+    ],
+    "spanishPages": [
+      274
+    ]
+  },
+  {
+    "id": "vinorelbine",
+    "name": "Vinorelbine",
+    "spanishName": "Vinorelbina",
+    "aliases": [
+      "Navelbine",
+      "Vinorelbina",
+      "Vinorelbine"
+    ],
+    "englishPages": [
+      135
+    ],
+    "spanishPages": [
+      275
+    ]
+  },
+  {
+    "id": "voriconazole",
+    "name": "Voriconazole",
+    "spanishName": "Voriconazole",
+    "aliases": [
+      "Vfend",
+      "Voriconazole"
+    ],
+    "englishPages": [
+      136
+    ],
+    "spanishPages": [
+      276
+    ]
+  },
+  {
+    "id": "vorinostat",
+    "name": "Vorinostat",
+    "spanishName": "Vorinostat",
+    "aliases": [
+      "Vorinostat",
+      "Zolinza"
+    ],
+    "englishPages": [
+      137
+    ],
+    "spanishPages": [
+      277
+    ]
+  },
+  {
+    "id": "warfarin",
+    "name": "Warfarin",
+    "spanishName": "Warfarina",
+    "aliases": [
+      "Coumadin",
+      "Warfarin",
+      "Warfarina"
+    ],
+    "englishPages": [
+      138
+    ],
+    "spanishPages": [
+      278
+    ]
+  }
+]

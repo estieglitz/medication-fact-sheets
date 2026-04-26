@@ -1,0 +1,37 @@
+{
+  "SR ALL Induction": {
+    "name": "SR ALL induction",
+    "aliases": ["aall1731 induction", "aall1731", "aall0932 induction", "all induction"],
+    "medications": ["vincristine", "dexamethasone","asparaginase", "methotrexate"]
+  },
+"HR ALL Induction": {
+    "name": "HR ALL induction",
+    "aliases": ["aall1731 induction", "aall1731", "aall0932 induction", "all induction"],
+    "medications": ["vincristine", "prednisone","asparaginase", "daunorubicin", "methotrexate"]
+  },
+  "all post-induction": {
+    "name": "ALL post-induction",
+    "aliases": ["all consolidation", "aall consolidation"],
+    "medications": ["cyclophosphamide", "cytarabine", "mercaptopurine", "methotrexate", "vincristine", "pegaspargase"]
+  },
+  "aml-induction": {
+    "name": "AML induction",
+    "aliases": ["aaml1831 induction", "aaml induction", "aml induction", "7+3", "7 and 3"],
+    "medications": ["cytarabine", "daunorubicin", "gemtuzumab"]
+  },
+  "aml post-induction": {
+    "name": "AML post-induction",
+    "aliases": ["aml intensification", "high dose cytarabine", "hide cytarabine", "hidac"],
+    "medications": ["cytarabine", "etoposide", "mitoxantrone", "asparaginase"]
+  },
+  "jmml-low-risk": {
+    "name": "JMML lower-risk T2020-style backbone",
+    "aliases": ["jmml lr", "lower risk jmml", "jmml lower risk", "t2020 lower risk", "t2020 lr"],
+    "medications": ["azacitidine", "trametinib"]
+  },
+  "jmml-high-risk": {
+    "name": "JMML high-risk T2020-style backbone",
+    "aliases": ["jmml hr", "high risk jmml", "jmml high risk", "t2020 high risk", "t2020 hr"],
+    "medications": ["azacitidine", "trametinib", "fludarabine", "cytarabine"]
+  }
+}
