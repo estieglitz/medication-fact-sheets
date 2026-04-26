@@ -23,5 +23,5 @@
     "name": "AML post-induction",
     "aliases": ["aml intensification", "high dose cytarabine", "hide cytarabine", "hidac"],
     "medications": ["cytarabine", "etoposide", "mitoxantrone", "asparaginase"]
-  },
+  }
 }
