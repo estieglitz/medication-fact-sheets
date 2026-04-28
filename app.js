@@ -1,5 +1,5 @@
 const SOURCE_PDF = 'source.pdf';
-const COVER_PDF = 'NOS_Consent.pdf';
+const NOS_CONSENT_PDF = 'NOS_Consent.pdf';
 let drugIndex = [];
 let protocols = {};
 
@@ -135,7 +135,6 @@ function loadProtocolMedications({ append = true } = {}) {
   document.getElementById('medInput').value = merged.join('\n');
   renderMatches();
 }
-
 function wrapText(text, font, size, maxWidth) {
   const words = String(text).split(/\s+/).filter(Boolean);
   const lines = [];
@@ -153,71 +152,42 @@ function wrapText(text, font, size, maxWidth) {
   return lines;
 }
 
-function sortedMatchedDrugNames(matchedDrugs, lang) {
-  return matchedDrugs
-    .map(m => getDisplayName(m.drug, lang))
-    .filter(Boolean)
-    .sort((a, b) => a.localeCompare(b));
-}
+async function addNosConsentCoverPages(outDoc, lang, matchedDrugs) {
+  const consentBytes = await fetch(NOS_CONSENT_PDF).then(res => {
+    if (!res.ok) throw new Error('Could not load NOS_Consent.pdf. Make sure it is in the same folder as index.html.');
+    return res.arrayBuffer();
+  });
+  const consentDoc = await PDFLib.PDFDocument.load(consentBytes);
 
-async function addMedicationListPage(outDoc, lang, matchedDrugs, missingInputs) {
-  const page = outDoc.addPage([612, 792]);
-  const { width, height } = page.getSize();
+  const pageCount = consentDoc.getPageCount();
+  const pagesToCopy = pageCount >= 2 ? [0, 1] : [0];
+  const copiedPages = await outDoc.copyPages(consentDoc, pagesToCopy);
+  copiedPages.forEach(page => outDoc.addPage(page));
+
+  const listPage = pageCount >= 2 ? outDoc.getPage(outDoc.getPageCount() - 1) : outDoc.addPage([612, 792]);
   const font = await outDoc.embedFont(PDFLib.StandardFonts.Helvetica);
-  const bold = await outDoc.embedFont(PDFLib.StandardFonts.HelveticaBold);
-  const margin = 54;
-  let y = height - 72;
+  const { width, height } = listPage.getSize();
+  const left = 72;
+  const right = width - 72;
+  const maxWidth = right - left;
+  let y = height - 142;
 
-  page.drawText('Medications Included in This Packet', { x: margin, y, size: 20, font: bold });
-  y -= 24;
-  page.drawText(`Language: ${lang === 'spanish' ? 'Spanish' : 'English'}`, { x: margin, y, size: 11, font });
-  y -= 30;
-
-  const names = sortedMatchedDrugNames(matchedDrugs, lang);
-  names.forEach((name, i) => {
-    const prefix = `${i + 1}. `;
-    const wrapped = wrapText(name, font, 12, width - margin * 2 - 24);
-    wrapped.forEach((line, lineIndex) => {
-      if (y < 72) {
-        y = height - 72;
-        page.drawText('Medications Included in This Packet, continued', { x: margin, y, size: 16, font: bold });
-        y -= 28;
+  const medicationNames = matchedDrugs.map(m => getDisplayName(m.drug, lang));
+  medicationNames.forEach((name, index) => {
+    const lines = wrapText(`${index + 1}. ${name}`, font, 12, maxWidth);
+    lines.forEach(line => {
+      if (y >= 72) {
+        listPage.drawText(line, { x: left, y, size: 12, font });
+        y -= 18;
       }
-      page.drawText(lineIndex === 0 ? `${prefix}${line}` : `   ${line}`, { x: margin + 18, y, size: 12, font });
-      y -= 18;
     });
+    y -= 4;
   });
 
-  if (missingInputs.length) {
-    y -= 12;
-    if (y < 100) y = height - 72;
-    page.drawText('Entered but not found / not included:', { x: margin, y, size: 13, font: bold });
-    y -= 20;
-    missingInputs.forEach(input => {
-      if (y < 72) y = height - 72;
-      page.drawText(`- ${input}`.slice(0, 95), { x: margin + 18, y, size: 11, font });
-      y -= 16;
-    });
+  if (medicationNames.length === 0) {
+    listPage.drawText('No medications selected.', { x: left, y, size: 12, font });
   }
 }
-
-async function addCoverPage(outDoc, lang, matchedDrugs, missingInputs) {
-  try {
-    const coverBytes = await fetch(COVER_PDF).then(res => {
-      if (!res.ok) throw new Error(`${COVER_PDF} not found`);
-      return res.arrayBuffer();
-    });
-    const coverDoc = await PDFLib.PDFDocument.load(coverBytes);
-    const [firstCoverPage] = await outDoc.copyPages(coverDoc, [0]);
-    outDoc.addPage(firstCoverPage);
-  } catch (e) {
-    alert(`Cover page file ${COVER_PDF} could not be loaded. The packet will be generated with the medication list page only. To use the NOS_Consent Word document exactly, export page 1 as ${COVER_PDF} and place it in this folder.`);
-  }
-
-  await addMedicationListPage(outDoc, lang, matchedDrugs, missingInputs);
-}
-
-
 async function generatePdf() {
   renderMatches();
   const lang = getLanguage();
@@ -240,7 +210,7 @@ async function generatePdf() {
   });
   const srcDoc = await PDFLib.PDFDocument.load(existingPdfBytes);
   const outDoc = await PDFLib.PDFDocument.create();
-  if (document.getElementById('coverPage').checked) await addCoverPage(outDoc, lang, matches, missing);
+  if (document.getElementById('coverPage').checked) await addNosConsentCoverPages(outDoc, lang, matches);
   const copied = await outDoc.copyPages(srcDoc, pageNums.map(p => p - 1));
   copied.forEach(p => outDoc.addPage(p));
   const bytes = await outDoc.save();

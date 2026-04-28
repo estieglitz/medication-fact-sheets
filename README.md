@@ -1,6 +1,25 @@
 # Medication Fact Sheet Packet Builder
 
-A static, free web app that collates APHON medication fact sheet pages into one printable PDF packet.
+Static GitHub Pages-ready app for creating a printable medication fact sheet packet.
+
+## What this version includes
+
+- Removed the inactive **Preview matches** button.
+- Removed the bottom content note.
+- Uses `NOS_Consent.pdf` as the consent cover document.
+  - Page 1 is copied exactly from `NOS_Consent.pdf`.
+  - Page 2 is copied from `NOS_Consent.pdf` and populated with the medications included in the packet.
+- Protocol presets remain editable in `protocols.json`.
+
+## Files required in the same folder
+
+- `index.html`
+- `app.js`
+- `style.css`
+- `drug-index.json`
+- `protocols.json`
+- `source.pdf`
+- `NOS_Consent.pdf`
 
 ## Run locally
 
@@ -16,42 +35,12 @@ Then open:
 http://localhost:8000
 ```
 
-Do not open `index.html` directly; browser security can block loading `drug-index.json`, `protocols.json`, or `source.pdf`.
+Do not open `index.html` directly; browser security can block loading the JSON and PDF files.
 
-## What is included
+## Publish with GitHub Pages
 
-- English/Spanish output selector
-- Protocol presets from `protocols.json`
-- Manual medication list
-- Alias and fuzzy matching, including brand names and abbreviations already present in `drug-index.json`
-- Live match preview and not-found feedback
-- Optional cover page using `NOS_Consent.pdf` page 1, followed by a medication list page
-- In-browser PDF generation using `pdf-lib`
-
-## Editing protocols
-
-Edit `protocols.json`. Each protocol has:
-
-```json
-{
-  "name": "ALL induction",
-  "aliases": ["aall1731 induction", "all induction"],
-  "medications": ["vincristine", "dexamethasone", "pegaspargase"]
-}
-```
-
-Medication names should match entries or aliases in `drug-index.json`. The app also performs fuzzy matching.
-
-## Cover page
-
-To use the updated NOS consent cover exactly, export the first page of `NOS_Consent.docx` as a PDF named:
-
-```text
-NOS_Consent.pdf
-```
-
-Place `NOS_Consent.pdf` in the same folder as `index.html`, `app.js`, `source.pdf`, `drug-index.json`, and `protocols.json`. When **Add cover page** is checked, the app copies page 1 of `NOS_Consent.pdf` exactly, then creates a second cover page listing all matched medications included in the packet.
-
-## Publishing online
-
-This can be hosted free with GitHub Pages or Cloudflare Pages because it is a static site.
+1. Upload all files in this folder to your GitHub repository.
+2. Go to **Settings → Pages**.
+3. Under **Build and deployment**, select the branch and folder that contain `index.html`.
+4. Save.
+5. Open the GitHub Pages URL after deployment finishes.

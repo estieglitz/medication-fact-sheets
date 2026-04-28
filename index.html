@@ -10,7 +10,7 @@
   <main class="container">
     <section class="hero">
       <h1>Medication Fact Sheet Packet Builder</h1>
-      <p>Create one printable PDF packet from APHON medication fact sheets by entering medications, optionally adding a protocol preset, and choosing English or Spanish.</p>
+      <p>Create one printable PDF packet from medication fact sheets by entering medications, optionally adding a protocol preset, and choosing English or Spanish.</p>
     </section>
 
     <section class="card grid">
@@ -24,7 +24,7 @@
           <option value="english">English</option>
           <option value="spanish">Spanish</option>
         </select>
-        <label class="checkbox"><input type="checkbox" id="coverPage" checked /> Add cover page</label>
+        <label class="checkbox"><input type="checkbox" id="coverPage" checked /> Add NOS consent cover pages</label>
       </div>
       <div class="actions full-width">
         <button id="generate" type="button" class="primary">Generate PDF packet</button>
@@ -48,7 +48,6 @@
       <div id="summary" class="summary"></div>
       <div id="results" class="results muted">No medications selected yet.</div>
     </section>
-
   </main>
   <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
   <script src="app.js"></script>
