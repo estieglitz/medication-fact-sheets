@@ -1,4 +1,5 @@
 const SOURCE_PDF = 'source.pdf';
+const COVER_PDF = 'NOS_Consent.pdf';
 let drugIndex = [];
 let protocols = {};
 
@@ -135,34 +136,87 @@ function loadProtocolMedications({ append = true } = {}) {
   renderMatches();
 }
 
-async function addCoverPage(outDoc, lang, matchedDrugs, missingInputs) {
+function wrapText(text, font, size, maxWidth) {
+  const words = String(text).split(/\s+/).filter(Boolean);
+  const lines = [];
+  let line = '';
+  words.forEach(word => {
+    const test = line ? `${line} ${word}` : word;
+    if (font.widthOfTextAtSize(test, size) <= maxWidth) {
+      line = test;
+    } else {
+      if (line) lines.push(line);
+      line = word;
+    }
+  });
+  if (line) lines.push(line);
+  return lines;
+}
+
+function sortedMatchedDrugNames(matchedDrugs, lang) {
+  return matchedDrugs
+    .map(m => getDisplayName(m.drug, lang))
+    .filter(Boolean)
+    .sort((a, b) => a.localeCompare(b));
+}
+
+async function addMedicationListPage(outDoc, lang, matchedDrugs, missingInputs) {
   const page = outDoc.addPage([612, 792]);
   const { width, height } = page.getSize();
   const font = await outDoc.embedFont(PDFLib.StandardFonts.Helvetica);
   const bold = await outDoc.embedFont(PDFLib.StandardFonts.HelveticaBold);
+  const margin = 54;
   let y = height - 72;
-  page.drawText('Medication Fact Sheet Packet', { x: 54, y, size: 22, font: bold });
-  y -= 34;
-  page.drawText(`Language: ${lang === 'spanish' ? 'Spanish' : 'English'}`, { x: 54, y, size: 12, font });
-  y -= 18;
-  page.drawText(`Created: ${new Date().toLocaleDateString()}`, { x: 54, y, size: 12, font });
-  y -= 34;
-  page.drawText('Included medications:', { x: 54, y, size: 14, font: bold });
-  y -= 22;
-  matchedDrugs.forEach((m, i) => {
-    const text = `${i + 1}. ${getDisplayName(m.drug, lang)}`;
-    page.drawText(text.slice(0, 90), { x: 72, y, size: 11, font });
-    y -= 16;
-    if (y < 90) { y = height - 72; }
+
+  page.drawText('Medications Included in This Packet', { x: margin, y, size: 20, font: bold });
+  y -= 24;
+  page.drawText(`Language: ${lang === 'spanish' ? 'Spanish' : 'English'}`, { x: margin, y, size: 11, font });
+  y -= 30;
+
+  const names = sortedMatchedDrugNames(matchedDrugs, lang);
+  names.forEach((name, i) => {
+    const prefix = `${i + 1}. `;
+    const wrapped = wrapText(name, font, 12, width - margin * 2 - 24);
+    wrapped.forEach((line, lineIndex) => {
+      if (y < 72) {
+        y = height - 72;
+        page.drawText('Medications Included in This Packet, continued', { x: margin, y, size: 16, font: bold });
+        y -= 28;
+      }
+      page.drawText(lineIndex === 0 ? `${prefix}${line}` : `   ${line}`, { x: margin + 18, y, size: 12, font });
+      y -= 18;
+    });
   });
+
   if (missingInputs.length) {
-    y -= 14;
-    page.drawText('Not found / not included:', { x: 54, y, size: 14, font: bold });
+    y -= 12;
+    if (y < 100) y = height - 72;
+    page.drawText('Entered but not found / not included:', { x: margin, y, size: 13, font: bold });
     y -= 20;
-    missingInputs.forEach((m) => { page.drawText(`- ${m}`.slice(0, 90), { x: 72, y, size: 11, font }); y -= 16; });
+    missingInputs.forEach(input => {
+      if (y < 72) y = height - 72;
+      page.drawText(`- ${input}`.slice(0, 95), { x: margin + 18, y, size: 11, font });
+      y -= 16;
+    });
   }
-  page.drawText('Review all materials for institutional appropriateness before distribution.', { x: 54, y: 40, size: 9, font });
 }
+
+async function addCoverPage(outDoc, lang, matchedDrugs, missingInputs) {
+  try {
+    const coverBytes = await fetch(COVER_PDF).then(res => {
+      if (!res.ok) throw new Error(`${COVER_PDF} not found`);
+      return res.arrayBuffer();
+    });
+    const coverDoc = await PDFLib.PDFDocument.load(coverBytes);
+    const [firstCoverPage] = await outDoc.copyPages(coverDoc, [0]);
+    outDoc.addPage(firstCoverPage);
+  } catch (e) {
+    alert(`Cover page file ${COVER_PDF} could not be loaded. The packet will be generated with the medication list page only. To use the NOS_Consent Word document exactly, export page 1 as ${COVER_PDF} and place it in this folder.`);
+  }
+
+  await addMedicationListPage(outDoc, lang, matchedDrugs, missingInputs);
+}
+
 
 async function generatePdf() {
   renderMatches();
@@ -216,7 +270,6 @@ async function init() {
 
 document.getElementById('loadProtocol').addEventListener('click', () => loadProtocolMedications({ append: true }));
 document.getElementById('replaceWithProtocol').addEventListener('click', () => loadProtocolMedications({ append: false }));
-document.getElementById('preview').addEventListener('click', renderMatches);
 document.getElementById('generate').addEventListener('click', generatePdf);
 document.getElementById('clear').addEventListener('click', () => { document.getElementById('medInput').value=''; document.getElementById('protocolInput').value=''; renderMatches(); });
 document.getElementById('language').addEventListener('change', renderMatches);

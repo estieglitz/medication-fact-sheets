@@ -24,8 +24,8 @@ Do not open `index.html` directly; browser security can block loading `drug-inde
 - Protocol presets from `protocols.json`
 - Manual medication list
 - Alias and fuzzy matching, including brand names and abbreviations already present in `drug-index.json`
-- Match preview and not-found feedback
-- Optional cover page
+- Live match preview and not-found feedback
+- Optional cover page using `NOS_Consent.pdf` page 1, followed by a medication list page
 - In-browser PDF generation using `pdf-lib`
 
 ## Editing protocols
@@ -42,6 +42,16 @@ Edit `protocols.json`. Each protocol has:
 
 Medication names should match entries or aliases in `drug-index.json`. The app also performs fuzzy matching.
 
+## Cover page
+
+To use the updated NOS consent cover exactly, export the first page of `NOS_Consent.docx` as a PDF named:
+
+```text
+NOS_Consent.pdf
+```
+
+Place `NOS_Consent.pdf` in the same folder as `index.html`, `app.js`, `source.pdf`, `drug-index.json`, and `protocols.json`. When **Add cover page** is checked, the app copies page 1 of `NOS_Consent.pdf` exactly, then creates a second cover page listing all matched medications included in the packet.
+
 ## Publishing online
 
-This can be hosted free with GitHub Pages or Cloudflare Pages because it is a static site. Confirm copyright/licensing permissions before publicly hosting the APHON PDF.
+This can be hosted free with GitHub Pages or Cloudflare Pages because it is a static site.
