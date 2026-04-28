@@ -31,3 +31,4 @@ small, code { color: var(--muted); }
 @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } .actions button { width:100%; } }
 .full-width { grid-column: 1 / -1; }
 .protocol-card { margin-top: 16px; }
+.field-spacer { margin-top: 14px; }

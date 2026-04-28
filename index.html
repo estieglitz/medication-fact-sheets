@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Medication Fact Sheet Packet Builder</title>
+  <title>Individualized Consent Packet Generator</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main class="container">
     <section class="hero">
-      <h1>Medication Fact Sheet Packet Builder</h1>
-      <p>Create one printable PDF packet from medication fact sheets by entering medications, optionally adding a protocol preset, and choosing English or Spanish.</p>
+      <h1>Individualized Consent Packet Generator</h1>
+      <p>Create one printable consent packet from the NOS consent form and APHON medication fact sheets by entering treatment details, medications, protocol presets, and patient language.</p>
     </section>
 
     <section class="card grid">
@@ -19,12 +19,18 @@
         <textarea id="medInput" rows="8" placeholder="Type one medication per line, or separate with commas. Example: cytarabine, daunorubicin, etoposide"></textarea>
       </div>
       <div>
-        <label for="language">Patient language</label>
+        <label for="providerInput">Doctor / provider name</label>
+        <input id="providerInput" type="text" placeholder="e.g., Elliot Stieglitz, MD" />
+
+        <label for="diseaseInput" class="field-spacer">Disease and stage</label>
+        <input id="diseaseInput" type="text" placeholder="e.g., JMML" />
+
+        <label for="language" class="field-spacer">Patient language</label>
         <select id="language">
           <option value="english">English</option>
           <option value="spanish">Spanish</option>
         </select>
-        <label class="checkbox"><input type="checkbox" id="coverPage" checked /> Add NOS consent cover pages</label>
+        <label class="checkbox"><input type="checkbox" id="coverPage" checked /> Add NOS consent pages</label>
       </div>
       <div class="actions full-width">
         <button id="generate" type="button" class="primary">Generate PDF packet</button>
