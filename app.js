@@ -233,7 +233,7 @@ async function addNosConsentPages(outDoc, lang, matchedDrugs) {
   // Page 1 overlays. Patient name is intentionally left blank.
   if (providerName.trim()) {
     page1.drawText(truncateForLine(providerName, 42), {
-      x: 172,
+      x: 240,
       y: 635,
       size: 11,
       font
