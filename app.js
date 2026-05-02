@@ -229,6 +229,7 @@ async function addNosConsentPages(outDoc, lang, matchedDrugs) {
 
   const providerName = document.getElementById('providerInput').value;
   const diseaseStage = document.getElementById('diseaseInput').value;
+  const othersAttendance = document.getElementById('attendanceInput').value;
 
   // Page 1 overlays. Patient name is intentionally left blank.
   if (providerName.trim()) {
@@ -244,6 +245,15 @@ async function addNosConsentPages(outDoc, lang, matchedDrugs) {
     page1.drawText(truncateForLine(diseaseStage, 38), {
       x: 224,
       y: 567,
+      size: 11,
+      font
+    });
+  }
+
+  if (othersAttendance.trim()) {
+    page1.drawText(truncateForLine(othersAttendance, 48), {
+      x: 210,
+      y: 531,
       size: 11,
       font
     });
@@ -344,6 +354,7 @@ document.getElementById('clear').addEventListener('click', () => {
   document.getElementById('protocolInput').value = '';
   document.getElementById('providerInput').value = '';
   document.getElementById('diseaseInput').value = '';
+  document.getElementById('attendanceInput').value = '';
   renderMatches();
 });
 document.getElementById('language').addEventListener('change', renderMatches);
