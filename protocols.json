@@ -1,27 +1,81 @@
 {
-  "SR ALL Induction": {
-    "name": "SR ALL induction",
-    "aliases": ["aall1731 induction", "aall1731", "aall0932 induction", "all induction"],
-    "medications": ["vincristine", "dexamethasone","asparaginase", "methotrexate"]
+  "all": {
+    "name": "ALL",
+    "aliases": [
+      "acute lymphoblastic leukemia",
+      "b-all",
+      "t-all",
+      "all"
+    ],
+    "medications": [
+      "vincristine",
+      "dexamethasone",
+      "prednisone",
+      "daunorubicin",
+      "doxorubicin",
+      "cyclophosphamide",
+      "cytarabine",
+      "methotrexate",
+      "leucovorin",
+      "mercaptopurine",
+      "thioguanine",
+      "pegaspargase",
+      "blinatumomab"
+    ]
   },
-"HR ALL Induction": {
-    "name": "HR ALL induction",
-    "aliases": ["aall1731 induction", "aall1731", "aall0932 induction", "all induction"],
-    "medications": ["vincristine", "prednisone","asparaginase", "daunorubicin", "methotrexate"]
+
+  "aml": {
+    "name": "AML",
+    "aliases": [
+      "acute myeloid leukemia",
+      "aml"
+    ],
+    "medications": [
+      "cytarabine",
+      "daunorubicin",
+      "etoposide",
+      "gemtuzumab ozogamicin",
+      "mitoxantrone",
+      "hydrocortisone",
+      "gilteritinib"
+    ]
   },
-  "all post-induction": {
-    "name": "ALL post-induction",
-    "aliases": ["all consolidation", "aall consolidation"],
-    "medications": ["cyclophosphamide", "cytarabine", "mercaptopurine", "methotrexate", "vincristine", "pegaspargase"]
+
+  "sarcoma": {
+    "name": "Sarcoma",
+    "aliases": [
+      "osteosarcoma",
+      "ewing sarcoma",
+      "sarcoma"
+    ],
+    "medications": [
+      "methotrexate",
+      "doxorubicin",
+      "cisplatin",
+      "ifosfamide",
+      "etoposide",
+      "vincristine",
+      "cyclophosphamide"
+    ]
   },
-  "aml-induction": {
-    "name": "AML induction",
-    "aliases": ["aaml1831 induction", "aaml induction", "aml induction", "7+3", "7 and 3"],
-    "medications": ["cytarabine", "daunorubicin", "gemtuzumab"]
-  },
-  "aml post-induction": {
-    "name": "AML post-induction",
-    "aliases": ["aml intensification", "high dose cytarabine", "hide cytarabine", "hidac"],
-    "medications": ["cytarabine", "etoposide", "mitoxantrone", "asparaginase"]
+
+  "neuroblastoma": {
+    "name": "Neuroblastoma",
+    "aliases": [
+      "nb",
+      "neuroblastoma"
+    ],
+    "medications": [
+      "cyclophosphamide",
+      "doxorubicin",
+      "vincristine",
+      "cisplatin",
+      "etoposide",
+      "topotecan",
+      "dinutuximab",
+      "isotretinoin",
+      "irinotecan",
+      "temozolomide"
+    ]
   }
 }
