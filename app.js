@@ -253,7 +253,7 @@ async function addNosConsentPages(outDoc, lang, matchedDrugs) {
   if (othersAttendance.trim()) {
     page1.drawText(truncateForLine(othersAttendance, 48), {
       x: 250,
-      y: 528,
+      y: 525,
       size: 11,
       font
     });
