@@ -231,16 +231,17 @@ async function addNosConsentPages(outDoc, lang, medicationNames) {
   // embedded at the upper-left. Mask those out, then add the desired
   // "Page X of Y" label at the bottom of the two NOS consent pages only.
   function maskOriginalNosPageNumber(page) {
-    const { height } = page.getSize();
-    page.drawRectangle({
-      x: 0,
-      y: height - 72,
-      width: 96,
-      height: 72,
-      color: PDFLib.rgb(1, 1, 1),
-      borderWidth: 0
-    });
-  }
+  const { height } = page.getSize();
+
+  page.drawRectangle({
+    x: 0,
+    y: height - 120,
+    width: 120,
+    height: 120,
+    color: PDFLib.rgb(1, 1, 1),
+    borderWidth: 0
+  });
+}
 
   function drawNosPageNumber(page, label) {
     const { width } = page.getSize();
