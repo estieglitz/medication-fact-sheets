@@ -213,7 +213,7 @@ function drawWrappedText(page, text, { x, y, maxChars = 76, lineHeight = 16, siz
   return currentY - lineHeight;
 }
 
-async function addNosConsentPages(outDoc, lang, medicationNames, missingMedications = []) {
+async function addNosConsentPages(outDoc, lang, medicationNames) {
   const consentBytes = await fetch(CONSENT_PDF).then(res => {
     if (!res.ok) throw new Error('Could not load NOS_Consent.pdf. Make sure it is in the same folder and run through http://localhost:8000.');
     return res.arrayBuffer();
@@ -231,18 +231,6 @@ async function addNosConsentPages(outDoc, lang, medicationNames, missingMedicati
   const diseaseStage = document.getElementById('diseaseInput').value;
   const othersAttendance = document.getElementById('attendanceInput').value;
   const treatmentProtocol = document.getElementById('treatmentProtocolInput').value;
-
-  // Cover original page numbers embedded in NOS_Consent.pdf.
-  // These coordinates cover only the small top-left numbers "1" and "2".
-  [page1, page2].forEach(page => {
-    page.drawRectangle({
-      x: 64,
-      y: 755,
-      width: 32,
-      height: 24,
-      color: PDFLib.rgb(1, 1, 1)
-    });
-  });
 
   // Page 1 overlays. Patient name is intentionally left blank.
   if (providerName.trim()) {
@@ -272,13 +260,39 @@ async function addNosConsentPages(outDoc, lang, medicationNames, missingMedicati
     });
   }
 
-  // Page numbering applies to the NOS consent pages only, not the APHON medication sheets.
-  page1.drawText('Page 1 of 2', { x: 276, y: 24, size: 9, font });
-  page2.drawText('Page 2 of 2', { x: 276, y: 24, size: 9, font });
+  // Mask the original NOS page numbers embedded in the bottom-left of the source PDF.
+  // The replacement page numbering applies only to the NOS consent pages, not the APHON sheets.
+  [page1, page2].forEach(page => {
+    page.drawRectangle({
+      x: 58,
+      y: 28,
+      width: 60,
+      height: 28,
+      color: PDFLib.rgb(1, 1, 1)
+    });
+  });
+
+  const pageNumberSize = 9;
+  const pageNumberY = 36;
+  const page1Label = 'Page 1 of 2';
+  const page2Label = 'Page 2 of 2';
+  page1.drawText(page1Label, {
+    x: (page1.getWidth() - font.widthOfTextAtSize(page1Label, pageNumberSize)) / 2,
+    y: pageNumberY,
+    size: pageNumberSize,
+    font
+  });
+  page2.drawText(page2Label, {
+    x: (page2.getWidth() - font.widthOfTextAtSize(page2Label, pageNumberSize)) / 2,
+    y: pageNumberY,
+    size: pageNumberSize,
+    font
+  });
 
   // Page 2 medication list. Starts lower to preserve the NOS page heading.
   let y = 592;
-  medicationNames.forEach((med, index) => {
+  const meds = medicationNames;
+  meds.forEach((med, index) => {
     const label = `${index + 1}. ${med}`;
     y = drawWrappedText(page2, label, {
       x: 90,
@@ -290,63 +304,33 @@ async function addNosConsentPages(outDoc, lang, medicationNames, missingMedicati
     });
   });
 
-  // Treatment per protocol appears on page 2, below the medication list.
-  y -= 16;
-  const protocolBoxHeight = treatmentProtocol.trim() ? 58 : 38;
-  page2.drawRectangle({
-    x: 82,
-    y: y - protocolBoxHeight,
-    width: 448,
-    height: protocolBoxHeight,
-    borderWidth: 1,
-    borderColor: PDFLib.rgb(0, 0, 0)
-  });
-  page2.drawText('Treatment per protocol:', {
-    x: 92,
-    y: y - 18,
-    size: 10,
-    font
-  });
+  // Treatment per protocol belongs on page 2, below the medication list.
   if (treatmentProtocol.trim()) {
+    y -= 12;
+    const boxHeight = 54;
+    const boxY = Math.max(76, y - boxHeight);
+
+    page2.drawRectangle({
+      x: 82,
+      y: boxY,
+      width: 448,
+      height: boxHeight,
+      borderWidth: 1,
+      borderColor: PDFLib.rgb(0, 0, 0)
+    });
+
+    page2.drawText('Treatment per protocol:', {
+      x: 92,
+      y: boxY + boxHeight - 16,
+      size: 10,
+      font
+    });
+
     drawWrappedText(page2, treatmentProtocol, {
       x: 92,
-      y: y - 34,
+      y: boxY + boxHeight - 32,
       maxChars: 70,
       lineHeight: 12,
-      size: 10,
-      font
-    });
-  }
-  y -= protocolBoxHeight + 22;
-
-  // Print unmatched medications on the NOS medication page as a reminder to obtain separate med sheets.
-  if (missingMedications.length > 0) {
-    y = drawWrappedText(page2, 'The following medications do not have APHON medication sheets:', {
-      x: 82,
-      y,
-      maxChars: 76,
-      lineHeight: 14,
-      size: 10,
-      font
-    });
-
-    missingMedications.forEach(med => {
-      y = drawWrappedText(page2, `- ${med}`, {
-        x: 95,
-        y,
-        maxChars: 76,
-        lineHeight: 13,
-        size: 10,
-        font
-      });
-    });
-
-    y -= 4;
-    drawWrappedText(page2, 'Please obtain separate medication information sheets for these medications.', {
-      x: 82,
-      y,
-      maxChars: 76,
-      lineHeight: 14,
       size: 10,
       font
     });
@@ -392,7 +376,7 @@ async function generatePdf() {
   const outDoc = await PDFLib.PDFDocument.create();
 
   if (document.getElementById('coverPage').checked) {
-    await addNosConsentPages(outDoc, lang, medicationNamesForConsent, missing);
+    await addNosConsentPages(outDoc, lang, medicationNamesForConsent);
   }
 
   const copied = await outDoc.copyPages(srcDoc, pageNums.map(p => p - 1));
