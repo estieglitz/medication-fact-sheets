@@ -213,26 +213,7 @@ function drawWrappedText(page, text, { x, y, maxChars = 76, lineHeight = 16, siz
   return currentY - lineHeight;
 }
 
-async function addPageNumbers(outDoc) {
-  const pages = outDoc.getPages();
-  const total = pages.length;
-  const font = await outDoc.embedFont(PDFLib.StandardFonts.Helvetica);
-
-  pages.forEach((page, index) => {
-    const { width } = page.getSize();
-    const label = `Page ${index + 1} of ${total}`;
-    const textWidth = font.widthOfTextAtSize(label, 9);
-
-    page.drawText(label, {
-      x: (width - textWidth) / 2,
-      y: 18,
-      size: 9,
-      font
-    });
-  });
-}
-
-async function addNosConsentPages(outDoc, lang, matchedDrugs) {
+async function addNosConsentPages(outDoc, lang, medicationNames) {
   const consentBytes = await fetch(CONSENT_PDF).then(res => {
     if (!res.ok) throw new Error('Could not load NOS_Consent.pdf. Make sure it is in the same folder and run through http://localhost:8000.');
     return res.arrayBuffer();
@@ -279,36 +260,39 @@ async function addNosConsentPages(outDoc, lang, matchedDrugs) {
     });
   }
 
-  // Optional treatment protocol box under "Others in attendance".
+  // Boxed Treatment per protocol entry below Others in attendance.
+  page1.drawRectangle({
+    x: 82,
+    y: 468,
+    width: 448,
+    height: 48,
+    borderWidth: 1,
+    borderColor: PDFLib.rgb(0, 0, 0)
+  });
+  page1.drawText('Treatment per protocol:', {
+    x: 92,
+    y: 500,
+    size: 10,
+    font
+  });
   if (treatmentProtocol.trim()) {
-    page1.drawRectangle({
-      x: 72,
-      y: 468,
-      width: 468,
-      height: 42,
-      borderWidth: 1
-    });
-
-    page1.drawText('Treatment per protocol:', {
-      x: 84,
-      y: 493,
-      size: 10,
-      font
-    });
-
     drawWrappedText(page1, treatmentProtocol, {
-      x: 198,
-      y: 493,
-      maxChars: 46,
+      x: 92,
+      y: 484,
+      maxChars: 70,
       lineHeight: 12,
       size: 10,
       font
     });
   }
 
+  // Page numbering applies to the NOS consent pages only, not the APHON medication sheets.
+  page1.drawText('Page 1 of 2', { x: 276, y: 24, size: 9, font });
+  page2.drawText('Page 2 of 2', { x: 276, y: 24, size: 9, font });
+
   // Page 2 medication list. Starts lower to preserve the NOS page heading.
   let y = 592;
-  const meds = matchedDrugs.map(m => getDisplayName(m.drug, lang));
+  const meds = medicationNames;
   meds.forEach((med, index) => {
     const label = `${index + 1}. ${med}`;
     y = drawWrappedText(page2, label, {
@@ -329,13 +313,14 @@ async function generatePdf() {
   const allMatches = getMatches();
   const matches = allMatches.filter(m => m.drug);
   const missing = allMatches.filter(m => !m.drug).map(m => m.input);
+  const medicationNamesForConsent = allMatches.map(m => m.drug ? getDisplayName(m.drug, lang) : m.input);
 
   if (missing.length > 0) {
-    alert('These medications were not found and will not be included: ' + missing.join(', '));
+    alert('The following medication(s) are not in the APHON master file and will be listed on the NOS consent medication page, but no APHON medication sheet will be added. Please obtain the medsheet separately: ' + missing.join(', '));
   }
 
-  if (!matches.length) {
-    alert('No matched medications to export.');
+  if (!medicationNamesForConsent.length) {
+    alert('No medications entered.');
     return;
   }
 
@@ -360,13 +345,11 @@ async function generatePdf() {
   const outDoc = await PDFLib.PDFDocument.create();
 
   if (document.getElementById('coverPage').checked) {
-    await addNosConsentPages(outDoc, lang, matches);
+    await addNosConsentPages(outDoc, lang, medicationNamesForConsent);
   }
 
   const copied = await outDoc.copyPages(srcDoc, pageNums.map(p => p - 1));
   copied.forEach(p => outDoc.addPage(p));
-
-  await addPageNumbers(outDoc);
 
   const bytes = await outDoc.save();
   const blob = new Blob([bytes], { type: 'application/pdf' });
