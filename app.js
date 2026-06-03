@@ -227,6 +227,37 @@ async function addNosConsentPages(outDoc, lang, medicationNames) {
 
   const font = await outDoc.embedFont(PDFLib.StandardFonts.Helvetica);
 
+  // The NOS source PDF already has standalone page numbers ("1" and "2")
+  // embedded at the upper-left. Mask those out, then add the desired
+  // "Page X of Y" label at the bottom of the two NOS consent pages only.
+  function maskOriginalNosPageNumber(page) {
+    const { height } = page.getSize();
+    page.drawRectangle({
+      x: 0,
+      y: height - 72,
+      width: 96,
+      height: 72,
+      color: PDFLib.rgb(1, 1, 1),
+      borderWidth: 0
+    });
+  }
+
+  function drawNosPageNumber(page, label) {
+    const { width } = page.getSize();
+    const textWidth = font.widthOfTextAtSize(label, 10);
+    page.drawText(label, {
+      x: (width - textWidth) / 2,
+      y: 20,
+      size: 10,
+      font
+    });
+  }
+
+  maskOriginalNosPageNumber(page1);
+  maskOriginalNosPageNumber(page2);
+  drawNosPageNumber(page1, 'Page 1 of 2');
+  drawNosPageNumber(page2, 'Page 2 of 2');
+
   const providerName = document.getElementById('providerInput').value;
   const diseaseStage = document.getElementById('diseaseInput').value;
   const othersAttendance = document.getElementById('attendanceInput').value;
@@ -259,35 +290,6 @@ async function addNosConsentPages(outDoc, lang, medicationNames) {
       font
     });
   }
-
-  // Mask the original NOS page numbers embedded in the bottom-left of the source PDF.
-  // The replacement page numbering applies only to the NOS consent pages, not the APHON sheets.
-  [page1, page2].forEach(page => {
-    page.drawRectangle({
-      x: 58,
-      y: 28,
-      width: 60,
-      height: 28,
-      color: PDFLib.rgb(1, 1, 1)
-    });
-  });
-
-  const pageNumberSize = 9;
-  const pageNumberY = 36;
-  const page1Label = 'Page 1 of 2';
-  const page2Label = 'Page 2 of 2';
-  page1.drawText(page1Label, {
-    x: (page1.getWidth() - font.widthOfTextAtSize(page1Label, pageNumberSize)) / 2,
-    y: pageNumberY,
-    size: pageNumberSize,
-    font
-  });
-  page2.drawText(page2Label, {
-    x: (page2.getWidth() - font.widthOfTextAtSize(page2Label, pageNumberSize)) / 2,
-    y: pageNumberY,
-    size: pageNumberSize,
-    font
-  });
 
   // Page 2 medication list. Starts lower to preserve the NOS page heading.
   let y = 592;
