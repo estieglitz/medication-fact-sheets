@@ -213,6 +213,25 @@ function drawWrappedText(page, text, { x, y, maxChars = 76, lineHeight = 16, siz
   return currentY - lineHeight;
 }
 
+async function addPageNumbers(outDoc) {
+  const pages = outDoc.getPages();
+  const total = pages.length;
+  const font = await outDoc.embedFont(PDFLib.StandardFonts.Helvetica);
+
+  pages.forEach((page, index) => {
+    const { width } = page.getSize();
+    const label = `Page ${index + 1} of ${total}`;
+    const textWidth = font.widthOfTextAtSize(label, 9);
+
+    page.drawText(label, {
+      x: (width - textWidth) / 2,
+      y: 18,
+      size: 9,
+      font
+    });
+  });
+}
+
 async function addNosConsentPages(outDoc, lang, matchedDrugs) {
   const consentBytes = await fetch(CONSENT_PDF).then(res => {
     if (!res.ok) throw new Error('Could not load NOS_Consent.pdf. Make sure it is in the same folder and run through http://localhost:8000.');
@@ -230,6 +249,7 @@ async function addNosConsentPages(outDoc, lang, matchedDrugs) {
   const providerName = document.getElementById('providerInput').value;
   const diseaseStage = document.getElementById('diseaseInput').value;
   const othersAttendance = document.getElementById('attendanceInput').value;
+  const treatmentProtocol = document.getElementById('treatmentProtocolInput').value;
 
   // Page 1 overlays. Patient name is intentionally left blank.
   if (providerName.trim()) {
@@ -255,6 +275,33 @@ async function addNosConsentPages(outDoc, lang, matchedDrugs) {
       x: 250,
       y: 534,
       size: 11,
+      font
+    });
+  }
+
+  // Optional treatment protocol box under "Others in attendance".
+  if (treatmentProtocol.trim()) {
+    page1.drawRectangle({
+      x: 72,
+      y: 468,
+      width: 468,
+      height: 42,
+      borderWidth: 1
+    });
+
+    page1.drawText('Treatment per protocol:', {
+      x: 84,
+      y: 493,
+      size: 10,
+      font
+    });
+
+    drawWrappedText(page1, treatmentProtocol, {
+      x: 198,
+      y: 493,
+      maxChars: 46,
+      lineHeight: 12,
+      size: 10,
       font
     });
   }
@@ -319,6 +366,8 @@ async function generatePdf() {
   const copied = await outDoc.copyPages(srcDoc, pageNums.map(p => p - 1));
   copied.forEach(p => outDoc.addPage(p));
 
+  await addPageNumbers(outDoc);
+
   const bytes = await outDoc.save();
   const blob = new Blob([bytes], { type: 'application/pdf' });
   const a = document.createElement('a');
@@ -355,6 +404,7 @@ document.getElementById('clear').addEventListener('click', () => {
   document.getElementById('providerInput').value = '';
   document.getElementById('diseaseInput').value = '';
   document.getElementById('attendanceInput').value = '';
+  document.getElementById('treatmentProtocolInput').value = '';
   renderMatches();
 });
 document.getElementById('language').addEventListener('change', renderMatches);
