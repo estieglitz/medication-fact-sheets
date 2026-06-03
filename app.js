@@ -227,21 +227,34 @@ async function addNosConsentPages(outDoc, lang, medicationNames) {
 
   const font = await outDoc.embedFont(PDFLib.StandardFonts.Helvetica);
 
-  // The NOS source PDF already has standalone page numbers ("1" and "2")
-  // embedded at the upper-left. Mask those out, then add the desired
-  // "Page X of Y" label at the bottom of the two NOS consent pages only.
+  // Mask the original standalone page numbers ("1" and "2") embedded in
+  // NOS_Consent.pdf, then add only the desired footer labels. The mask is
+  // intentionally generous because the source PDF's coordinate origin/crop box
+  // can differ between PDF exports.
   function maskOriginalNosPageNumber(page) {
-  const { height } = page.getSize();
+    const { width, height } = page.getSize();
 
-  page.drawRectangle({
-    x: 0,
-    y: height - 120,
-    width: 120,
-    height: 120,
-    color: PDFLib.rgb(1, 1, 1),
-    borderWidth: 0
-  });
-}
+    // Primary mask: full-width top band, positioned above the title text.
+    page.drawRectangle({
+      x: 0,
+      y: height - 34,
+      width,
+      height: 34,
+      color: PDFLib.rgb(1, 1, 1),
+      borderWidth: 0
+    });
+
+    // Secondary mask: upper-left fallback for PDFs that place the number lower.
+    // This avoids covering the title while still erasing the original "1"/"2".
+    page.drawRectangle({
+      x: 0,
+      y: height - 72,
+      width: 72,
+      height: 72,
+      color: PDFLib.rgb(1, 1, 1),
+      borderWidth: 0
+    });
+  }
 
   function drawNosPageNumber(page, label) {
     const { width } = page.getSize();
