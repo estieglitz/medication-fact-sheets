@@ -322,7 +322,7 @@ async function addNosConsentPages(outDoc, lang, medicationNames) {
       borderColor: PDFLib.rgb(0, 0, 0)
     });
 
-    page2.drawText('Treatment per protocol:', {
+    page2.drawText('Treatment per protocol (optional):', {
       x: 92,
       y: boxY + boxHeight - 16,
       size: 10,
