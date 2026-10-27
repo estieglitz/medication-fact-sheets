@@ -231,17 +231,54 @@ async function addNosConsentPages(outDoc, lang, medicationNames) {
   // embedded at the upper-left. Mask those out, then add the desired
   // "Page X of Y" label at the bottom of the two NOS consent pages only.
   function maskOriginalNosPageNumber(page) {
-  const { height } = page.getSize();
+    // The original page number sits at bottom-center (~x 303-309, 745-756pt
+    // from the top). Mask only that spot so the UCSF logo stays fully visible.
+    page.drawRectangle({
+      x: 296,
+      y: 32,
+      width: 24,
+      height: 20,
+      color: PDFLib.rgb(1, 1, 1),
+      borderWidth: 0
+    });
+  }
 
-  page.drawRectangle({
-    x: 0,
-    y: height - 120,
-    width: 120,
-    height: 120,
-    color: PDFLib.rgb(1, 1, 1),
-    borderWidth: 0
-  });
-}
+  // Widen the "Patient Name" line so long names fit, and center its label
+  // beneath it. The template's short underscore line, trailing comma and
+  // label are covered, then redrawn.
+  function widenPatientNameLine(page) {
+    const lineStartX = 277.4;
+    const lineEndX = 525;
+    const lineY = 598;
+
+    page.drawRectangle({
+      x: 276,
+      y: 585,
+      width: 170,
+      height: 25,
+      color: PDFLib.rgb(1, 1, 1),
+      borderWidth: 0
+    });
+
+    page.drawLine({
+      start: { x: lineStartX, y: lineY },
+      end: { x: lineEndX, y: lineY },
+      thickness: 0.75,
+      color: PDFLib.rgb(0, 0, 0)
+    });
+
+    page.drawText(',', { x: lineEndX + 1, y: 599, size: 12, font });
+
+    const label = 'Patient Name';
+    const labelSize = 8;
+    const labelWidth = font.widthOfTextAtSize(label, labelSize);
+    page.drawText(label, {
+      x: (lineStartX + lineEndX) / 2 - labelWidth / 2,
+      y: 588,
+      size: labelSize,
+      font
+    });
+  }
 
   function drawNosPageNumber(page, label) {
     const { width } = page.getSize();
@@ -256,6 +293,7 @@ async function addNosConsentPages(outDoc, lang, medicationNames) {
 
   maskOriginalNosPageNumber(page1);
   maskOriginalNosPageNumber(page2);
+  widenPatientNameLine(page1);
   drawNosPageNumber(page1, 'Page 1 of 2');
   drawNosPageNumber(page2, 'Page 2 of 2');
 
