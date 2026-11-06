@@ -267,7 +267,7 @@ async function addNosConsentPages(outDoc, lang, medicationNames) {
       color: PDFLib.rgb(0, 0, 0)
     });
 
-    page.drawText(',', { x: lineEndX + 1, y: 599, size: 12, font });
+    page.drawText(',', { x: lineEndX + 1, y: 599.7, size: 11, font });
 
     const label = 'Patient Name';
     const labelSize = 8;
@@ -277,6 +277,49 @@ async function addNosConsentPages(outDoc, lang, medicationNames) {
       y: 588,
       size: labelSize,
       font
+    });
+  }
+
+  // Replace each "Date____" segment on the signature lines with a shorter
+  // name line plus "Date ____  Time ____". Rows are the template's text
+  // positions (top-of-text y, measured from the top of the page).
+  function addTimeFields(page) {
+    const rowTops = [438.09, 463.53, 488.73, 513.93, 590.01]; // Patient, Parent/Guardian, Attending, Fellow, Interpreter
+    const cutX = 350;        // name lines now end here
+    const dateLabelX = 356;
+    const dateLineX1 = 382, dateLineX2 = 438;
+    const timeLabelX = 444;
+    const timeLineX1 = 470, timeLineX2 = 530;
+    const size = 11; // matches the template's body text
+
+    rowTops.forEach(top => {
+      const lineY = 792 - (top + 11.65);
+      const baseY = 792 - top - 10;
+
+      page.drawRectangle({
+        x: cutX,
+        y: 792 - top - 14,
+        width: 190,
+        height: 16,
+        color: PDFLib.rgb(1, 1, 1),
+        borderWidth: 0
+      });
+
+      page.drawText('Date', { x: dateLabelX, y: baseY, size, font });
+      page.drawLine({
+        start: { x: dateLineX1, y: lineY },
+        end: { x: dateLineX2, y: lineY },
+        thickness: 0.75,
+        color: PDFLib.rgb(0, 0, 0)
+      });
+
+      page.drawText('Time', { x: timeLabelX, y: baseY, size, font });
+      page.drawLine({
+        start: { x: timeLineX1, y: lineY },
+        end: { x: timeLineX2, y: lineY },
+        thickness: 0.75,
+        color: PDFLib.rgb(0, 0, 0)
+      });
     });
   }
 
@@ -294,6 +337,7 @@ async function addNosConsentPages(outDoc, lang, medicationNames) {
   maskOriginalNosPageNumber(page1);
   maskOriginalNosPageNumber(page2);
   widenPatientNameLine(page1);
+  addTimeFields(page1);
   drawNosPageNumber(page1, 'Page 1 of 2');
   drawNosPageNumber(page2, 'Page 2 of 2');
 
