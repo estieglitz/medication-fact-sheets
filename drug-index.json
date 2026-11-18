@@ -269,6 +269,21 @@
     ]
   },
   {
+    "id": "bortezomib",
+    "name": "Bortezomib",
+    "spanishName": "Bortezomib",
+    "aliases": [
+      "Bortezomib",
+      "Velcade"
+    ],
+    "englishPages": [
+      279
+    ],
+    "spanishPages": [
+      280
+    ]
+  },
+  {
     "id": "busulfan",
     "name": "Busulfan",
     "spanishName": "Busulfán",
@@ -560,6 +575,27 @@
     ],
     "spanishPages": [
       175
+    ]
+  },
+  {
+    "id": "daratumumab",
+    "name": "Daratumumab",
+    "spanishName": "Daratumumab",
+    "aliases": [
+      "Daratumumab",
+      "Darzalex",
+      "Darzalex Faspro"
+    ],
+    "englishPages": [
+      281,
+      282,
+      283
+    ],
+    "spanishPages": [
+      284,
+      285,
+      286,
+      287
     ]
   },
   {
@@ -2029,6 +2065,21 @@
     ],
     "spanishPages": [
       272
+    ]
+  },
+  {
+    "id": "venetoclax",
+    "name": "Venetoclax",
+    "spanishName": "Venetoclax",
+    "aliases": [
+      "Venclexta",
+      "Venetoclax"
+    ],
+    "englishPages": [
+      288
+    ],
+    "spanishPages": [
+      289
     ]
   },
   {
