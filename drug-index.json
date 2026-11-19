@@ -1269,6 +1269,23 @@
     ]
   },
   {
+    "id": "inotuzumab-ozogamicin",
+    "name": "Inotuzumab Ozogamicin",
+    "spanishName": "Inotuzumab Ozogamicina",
+    "aliases": [
+      "Besponsa",
+      "Inotuzumab",
+      "Inotuzumab Ozogamicin",
+      "Inotuzumab Ozogamicina"
+    ],
+    "englishPages": [
+      298
+    ],
+    "spanishPages": [
+      299
+    ]
+  },
+  {
     "id": "interferon",
     "name": "Interferon",
     "spanishName": "Interferón",
